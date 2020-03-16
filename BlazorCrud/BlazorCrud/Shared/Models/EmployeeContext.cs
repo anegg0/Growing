@@ -11,7 +11,6 @@ namespace BlazorCrud.Server.DataAccess
         {
             if (!optionsBuilder.IsConfigured)
             {
-              // optionsBuilder.UseSqlServer(@"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=myTestDB;Data Source=ANKIT-LENOVO\SQLEXPRESS;");
               optionsBuilder.UseMySql("server=localhost;database=growing;user=admin;password=;persistsecurityinfo = True");
             }
         }
