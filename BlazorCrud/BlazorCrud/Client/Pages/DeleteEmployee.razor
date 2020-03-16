@@ -3,8 +3,8 @@
 @inject HttpClient Http
 @inject NavigationManager urlNavigationManager
 
-<h2>Delete Employee</h2>
-<h3>Are you sure you want to delete employee with id : @empID</h3>
+<h2>Delete Tray</h2>
+<h3>Are you sure you want to delete tray with id : @empID</h3>
 <br />
 
 <div class="col-md-4">
@@ -36,22 +36,22 @@
     [Parameter]
     public int empID { get; set; }
 
-    Employee emp = new Employee();
+    Tray emp = new Tray();
 
     protected override async Task OnInitializedAsync()
     {
-        emp = await Http.GetJsonAsync<Employee>("/api/Employee/Details/" + empID);
+        emp = await Http.GetJsonAsync<Tray>("/api/Tray/Details/" + empID);
     }
 
     protected async Task Delete()
     {
-        await Http.DeleteAsync("api/Employee/Delete/" + Convert.ToInt32(empID));
-        urlNavigationManager.NavigateTo("/fetchemployee");
+        await Http.DeleteAsync("api/Tray/Delete/" + Convert.ToInt32(empID));
+        urlNavigationManager.NavigateTo("/fetchtray");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchemployee");
+        urlNavigationManager.NavigateTo("/fetchtray");
     }
 
 

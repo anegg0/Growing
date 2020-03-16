@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace BlazorCrud.Server.DataAccess
 {
-    public class EmployeeDataAccessLayer: IEmployee
+    public class TrayDataAccessLayer: ITray
     {
-        EmployeeContext db = new EmployeeContext();
+        TrayContext db = new TrayContext();
 
-        //To Get all employees details   
-        public IEnumerable<Employee> GetAllEmployees()
+        //To Get all trays details   
+        public IEnumerable<Tray> GetAllTrays()
         {
             try
             {
@@ -25,12 +25,12 @@ namespace BlazorCrud.Server.DataAccess
             }
         }
 
-        //To Add new employee record     
-        public void AddEmployee(Employee employee)
+        //To Add new tray record     
+        public void AddTray(Tray tray)
         {
             try
             {
-                db.tblTray.Add(employee);
+                db.tblTray.Add(tray);
                 db.SaveChanges(); 
             }
             catch
@@ -39,12 +39,12 @@ namespace BlazorCrud.Server.DataAccess
             }
         }
 
-        //To Update the records of a particluar employee    
-        public void UpdateEmployee(Employee employee)
+        //To Update the records of a particluar tray    
+        public void UpdateTray(Tray tray)
         {
             try
             {
-                db.Entry(employee).State = EntityState.Modified;
+                db.Entry(tray).State = EntityState.Modified;
                 db.SaveChanges();
             }
             catch
@@ -53,13 +53,13 @@ namespace BlazorCrud.Server.DataAccess
             }
         }
 
-        //Get the details of a particular employee    
-        public Employee GetEmployeeData(int id)
+        //Get the details of a particular tray    
+        public Tray GetTrayData(int id)
         {
             try
             {
-                Employee employee = db.tblTray.Find(id);
-                return employee;
+                Tray tray = db.tblTray.Find(id);
+                return tray;
             }
             catch
             {
@@ -67,12 +67,12 @@ namespace BlazorCrud.Server.DataAccess
             }
         }
 
-        //To Delete the record of a particular employee    
-        public void DeleteEmployee(int id)
+        //To Delete the record of a particular tray    
+        public void DeleteTray(int id)
         {
             try
             {
-                Employee emp = db.tblTray.Find(id);
+                Tray emp = db.tblTray.Find(id);
                 db.tblTray.Remove(emp);
                 db.SaveChanges();
             }

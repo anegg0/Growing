@@ -1,12 +1,12 @@
-﻿@page "/editemployee/{empID:int}"
+﻿@page "/edittray/{empID:int}"
 @using BlazorCrud.Shared.Models
 @inject HttpClient Http
 @inject NavigationManager urlNavigationManager
 
-<h2>Edit Employee</h2>
+<h2>Edit Tray</h2>
 <hr />
 
-<EditForm Model="@emp" OnValidSubmit="UpdateEmployee">
+<EditForm Model="@emp" OnValidSubmit="UpdateTray">
     <DataAnnotationsValidator />
     <div class="form-group row">
         <label class="control-label col-md-12">Name</label>
@@ -50,21 +50,21 @@
     [Parameter]
     public int empID { get; set; }
 
-    Employee emp = new Employee();
+    Tray emp = new Tray();
 
     protected override async Task OnInitializedAsync()
     {
-        emp = await Http.GetJsonAsync<Employee>("/api/Employee/Details/" + empID);
+        emp = await Http.GetJsonAsync<Tray>("/api/Tray/Details/" + empID);
     }
 
-    protected async Task UpdateEmployee()
+    protected async Task UpdateTray()
     {
-        await Http.SendJsonAsync(HttpMethod.Put, "api/Employee/Edit", emp);
-        urlNavigationManager.NavigateTo("/fetchemployee");
+        await Http.SendJsonAsync(HttpMethod.Put, "api/Tray/Edit", emp);
+        urlNavigationManager.NavigateTo("/fetchtray");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchemployee");
+        urlNavigationManager.NavigateTo("/fetchtray");
     }
 }

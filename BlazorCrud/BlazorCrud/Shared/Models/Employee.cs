@@ -2,9 +2,9 @@
 
 namespace BlazorCrud.Shared.Models
 {
-    public class Employee
+    public class Tray
     {
-        public int EmployeeId { get; set; }
+        public int TrayId { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]

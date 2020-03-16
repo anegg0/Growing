@@ -11,51 +11,51 @@ using Microsoft.AspNetCore.Mvc;
 namespace BlazorCrud.Server.Controllers
 {
     [Route("api/[controller]")]
-    public class EmployeeController : Controller
+    public class TrayController : Controller
     {
-        private readonly IEmployee objemployee;
+        private readonly ITray objtray;
 
-        public EmployeeController(IEmployee _objemployee)
+        public TrayController(ITray _objtray)
         {
-            objemployee = _objemployee;
+            objtray = _objtray;
         }
 
         [HttpGet]
         [Route("Index")]
-        public IEnumerable<Employee> Index()
+        public IEnumerable<Tray> Index()
         {
-            return objemployee.GetAllEmployees();
+            return objtray.GetAllTrays();
         }
 
         [HttpPost]
         [Route("Create")]
-        public void Create([FromBody] Employee employee)
+        public void Create([FromBody] Tray tray)
         {
             if (ModelState.IsValid)
-                objemployee.AddEmployee(employee);
+                objtray.AddTray(tray);
         }
 
         [HttpGet]
         [Route("Details/{id}")]
-        public Employee Details(int id)
+        public Tray Details(int id)
         {
 
-            return objemployee.GetEmployeeData(id);
+            return objtray.GetTrayData(id);
         }
 
         [HttpPut]
         [Route("Edit")]
-        public void Edit([FromBody]Employee employee)
+        public void Edit([FromBody]Tray tray)
         {
             if (ModelState.IsValid)
-                objemployee.UpdateEmployee(employee);
+                objtray.UpdateTray(tray);
         }
 
         [HttpDelete]
         [Route("Delete/{id}")]
         public void Delete(int id)
         {
-            objemployee.DeleteEmployee(id);
+            objtray.DeleteTray(id);
         }
     }
 }

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BlazorCrud.Server.Interfaces
 {
-    public interface IEmployee
+    public interface ITray
     {
-        public IEnumerable<Employee> GetAllEmployees();
-        public void AddEmployee(Employee employee);
-        public void UpdateEmployee(Employee employee);
-        public Employee GetEmployeeData(int id);
-        public void DeleteEmployee(int id);
+        public IEnumerable<Tray> GetAllTrays();
+        public void AddTray(Tray tray);
+        public void UpdateTray(Tray tray);
+        public Tray GetTrayData(int id);
+        public void DeleteTray(int id);
     }
 }

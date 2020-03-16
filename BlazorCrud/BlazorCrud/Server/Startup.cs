@@ -16,7 +16,7 @@ namespace BlazorCrud.Server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddTransient<IEmployee, EmployeeDataAccessLayer>();
+            services.AddTransient<ITray, TrayDataAccessLayer>();
             services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(

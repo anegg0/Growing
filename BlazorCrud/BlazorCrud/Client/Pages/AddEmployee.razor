@@ -1,12 +1,12 @@
-﻿@page "/addemployee"
+﻿@page "/addtray"
 @using BlazorCrud.Shared.Models
 @inject HttpClient Http
 @inject NavigationManager urlNavigationManager
 
-<h1>Create Employee</h1>
+<h1>Create Tray</h1>
 <hr />
 
-<EditForm Model="@emp" OnValidSubmit="CreateEmployee">
+<EditForm Model="@emp" OnValidSubmit="CreateTray">
     <DataAnnotationsValidator />
     <div class="form-group row">
         <label class="control-label col-md-12">Name</label>
@@ -47,16 +47,16 @@
 </EditForm>
 
 @code {
-    Employee emp = new Employee();
+    Tray emp = new Tray();
 
-    protected async Task CreateEmployee()
+    protected async Task CreateTray()
     {
-        await Http.SendJsonAsync(HttpMethod.Post, "/api/Employee/Create", emp);
-        urlNavigationManager.NavigateTo("/fetchemployee");
+        await Http.SendJsonAsync(HttpMethod.Post, "/api/Tray/Create", emp);
+        urlNavigationManager.NavigateTo("/fetchtray");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchemployee");
+        urlNavigationManager.NavigateTo("/fetchtray");
     }
 }

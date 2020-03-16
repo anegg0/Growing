@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlazorCrud.Server.DataAccess
 {
-    public class EmployeeContext : DbContext
+    public class TrayContext : DbContext
     {
-        public virtual DbSet<Employee> tblTray { get; set; }
+        public virtual DbSet<Tray> tblTray { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

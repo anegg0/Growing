@@ -1,10 +1,10 @@
-﻿@page "/fetchemployee"
+﻿@page "/fetchtray"
 @using BlazorCrud.Shared.Models
 @inject HttpClient Http
 
-<h1>Employee Data</h1>
+<h1>Tray Data</h1>
 
-<p>This component demonstrates fetching Employee data from the server.</p>
+<p>This component demonstrates fetching Tray data from the server.</p>
 
 <p>
     <a href="/addemployee">Create New</a>
@@ -30,14 +30,14 @@ else
             @foreach (var emp in empList)
             {
                 <tr>
-                    <td>@emp.EmployeeId</td>
+                    <td>@emp.TrayId</td>
                     <td>@emp.Name</td>
                     <td>@emp.Gender</td>
                     <td>@emp.Department</td>
                     <td>@emp.City</td>
                     <td>
-                        <a href='/editemployee/@emp.EmployeeId'>Edit</a>  |
-                        <a href='/delete/@emp.EmployeeId'>Delete</a>
+                        <a href='/edittray/@emp.TrayId'>Edit</a>  |
+                        <a href='/delete/@emp.TrayId'>Delete</a>
                     </td>
                 </tr>
             }
@@ -46,10 +46,10 @@ else
 }
 @code {
 
-    Employee[] empList;
+    Tray[] empList;
 
     protected override async Task OnInitializedAsync()
     {
-        empList = await Http.GetJsonAsync<Employee[]>("/api/Employee/Index");
+        empList = await Http.GetJsonAsync<Tray[]>("/api/Tray/Index");
     }
 }
