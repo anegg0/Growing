@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\BlazorCrud.Server.csproj": {}
+    "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\BlazorCrud.Server.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj": {
+    "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj",
+        "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj",
         "projectName": "BlazorCrud.Client",
-        "projectPath": "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj",
-        "packagesPath": "C:\\Users\\ankit\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\obj\\",
+        "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj",
+        "packagesPath": "C:\\Users\\gaelb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ankit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\gaelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -30,8 +32,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj": {
-                "projectPath": "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj"
+              "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj": {
+                "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj"
               }
             }
           }
@@ -62,6 +64,10 @@
             "Microsoft.AspNetCore.Blazor.HttpClient": {
               "target": "Package",
               "version": "[3.2.0-preview1.20073.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.1.1, )"
             }
           },
           "imports": [
@@ -89,21 +95,23 @@
         }
       }
     },
-    "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\BlazorCrud.Server.csproj": {
+    "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\BlazorCrud.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\BlazorCrud.Server.csproj",
+        "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\BlazorCrud.Server.csproj",
         "projectName": "BlazorCrud.Server",
-        "projectPath": "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\BlazorCrud.Server.csproj",
-        "packagesPath": "C:\\Users\\ankit\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\obj\\",
+        "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\BlazorCrud.Server.csproj",
+        "packagesPath": "C:\\Users\\gaelb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ankit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\gaelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -115,11 +123,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj": {
-                "projectPath": "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj"
+              "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj": {
+                "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj"
               },
-              "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj": {
-                "projectPath": "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj"
+              "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj": {
+                "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj"
               }
             }
           }
@@ -136,6 +144,10 @@
             "Microsoft.AspNetCore.Blazor.Server": {
               "target": "Package",
               "version": "[3.2.0-preview1.20073.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.1.1, )"
             }
           },
           "imports": [
@@ -160,21 +172,23 @@
         }
       }
     },
-    "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj": {
+    "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj",
         "projectName": "BlazorCrud.Shared",
-        "projectPath": "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj",
-        "packagesPath": "C:\\Users\\ankit\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\BlazorUpdates\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj",
+        "packagesPath": "C:\\Users\\gaelb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ankit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\gaelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -202,6 +216,10 @@
               "version": "[3.1.1, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[3.1.1, )"
             },

@@ -30,6 +30,10 @@ obj\Debug\netstandard2.1\blazor\linker\Microsoft.Win32.Registry.dll
 obj\Debug\netstandard2.1\blazor\linker\Mono.Security.dll
 obj\Debug\netstandard2.1\blazor\linker\Mono.WebAssembly.Interop.dll
 obj\Debug\netstandard2.1\blazor\linker\mscorlib.dll
+obj\Debug\netstandard2.1\blazor\linker\MySqlConnector.dll
+obj\Debug\netstandard2.1\blazor\linker\Newtonsoft.Json.dll
+obj\Debug\netstandard2.1\blazor\linker\Pomelo.EntityFrameworkCore.MySql.dll
+obj\Debug\netstandard2.1\blazor\linker\Pomelo.JsonObject.dll
 obj\Debug\netstandard2.1\blazor\linker\System.Collections.Immutable.dll
 obj\Debug\netstandard2.1\blazor\linker\System.ComponentModel.DataAnnotations.dll
 obj\Debug\netstandard2.1\blazor\linker\System.Core.dll
