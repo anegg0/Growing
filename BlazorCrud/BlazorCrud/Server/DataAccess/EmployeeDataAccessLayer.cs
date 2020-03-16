@@ -17,7 +17,7 @@ namespace BlazorCrud.Server.DataAccess
         {
             try
             {
-                return db.tblEmployee.ToList();
+                return db.tblTray.ToList();
             }
             catch
             {
@@ -30,8 +30,8 @@ namespace BlazorCrud.Server.DataAccess
         {
             try
             {
-                db.tblEmployee.Add(employee);
-                db.SaveChanges();
+                db.tblTray.Add(employee);
+                db.SaveChanges(); 
             }
             catch
             {
@@ -58,7 +58,7 @@ namespace BlazorCrud.Server.DataAccess
         {
             try
             {
-                Employee employee = db.tblEmployee.Find(id);
+                Employee employee = db.tblTray.Find(id);
                 return employee;
             }
             catch
@@ -72,8 +72,8 @@ namespace BlazorCrud.Server.DataAccess
         {
             try
             {
-                Employee emp = db.tblEmployee.Find(id);
-                db.tblEmployee.Remove(emp);
+                Employee emp = db.tblTray.Find(id);
+                db.tblTray.Remove(emp);
                 db.SaveChanges();
             }
             catch
