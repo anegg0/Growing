@@ -29,17 +29,18 @@ else
         <tbody>
             @foreach (var emp in empList)
             {
-                <tr>
-                    <td>@emp.TrayId</td>
-                    <td>@emp.Name</td>
-                    <td>@emp.Gender</td>
-                    <td>@emp.Department</td>
-                    <td>@emp.City</td>
-                    <td>
-                        <a href='/edittray/@emp.TrayId'>Edit</a>  |
-                        <a href='/delete/@emp.TrayId'>Delete</a>
-                    </td>
-                </tr>
+            <tr>
+                <td>@emp.TrayId</td>
+                <td>@emp.Name</td>
+                <td>@emp.Gender</td>
+                <td>@emp.Department</td>
+                <td>@emp.City</td>
+                <td>@emp.SowingDate</td>
+                <td>
+                    <a href='/edittray/@emp.TrayId'>Edit</a>  |
+                    <a href='/delete/@emp.TrayId'>Delete</a>
+                </td>
+            </tr>
             }
         </tbody>
     </table>

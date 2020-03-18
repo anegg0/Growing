@@ -13,5 +13,6 @@ namespace BlazorCrud.Shared.Models
         public string Department { get; set; }
         [Required]
         public string City { get; set; }
+        public SowingDate CreatedTime { get; set; }
     }
 }
