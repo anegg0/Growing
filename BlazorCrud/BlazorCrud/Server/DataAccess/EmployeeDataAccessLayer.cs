@@ -72,8 +72,8 @@ namespace BlazorCrud.Server.DataAccess
         {
             try
             {
-                Tray emp = db.tblTray.Find(id);
-                db.tblTray.Remove(emp);
+                Tray tray = db.tblTray.Find(id);
+                db.tblTray.Remove(tray);
                 db.SaveChanges();
             }
             catch

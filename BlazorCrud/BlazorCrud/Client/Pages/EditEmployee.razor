@@ -1,4 +1,4 @@
-﻿@page "/edittray/{empID:int}"
+﻿@page "/edittray/{trayID:int}"
 @using BlazorCrud.Shared.Models
 @inject HttpClient Http
 @inject NavigationManager urlNavigationManager
@@ -6,46 +6,46 @@
 <h2>Edit Tray</h2>
 <hr />
 
-<EditForm Model="@emp" OnValidSubmit="UpdateTray">
+<EditForm Model="@tray" OnValidSubmit="UpdateTray">
     <DataAnnotationsValidator />
     <div class="form-group row">
         <label class="control-label col-md-12">Name</label>
         <div class="col-md-4">
-            <input class="form-control" @bind="emp.Name" />
+            <input class="form-control" @bind="tray.Name" />
         </div>
-        <ValidationMessage For="@(() => emp.Name)" />
+        <ValidationMessage For="@(() => tray.Name)" />
     </div>
     <div class="form-group row">
         <label class="control-label col-md-12">Gender</label>
         <div class="col-md-4">
-            <select asp-for="Gender" class="form-control" @bind="emp.Gender">
+            <select asp-for="Gender" class="form-control" @bind="tray.Gender">
                 <option value="">-- Select Gender --</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>
         </div>
-        <span><ValidationMessage For="@(() => emp.Gender)" /></span>
+        <span><ValidationMessage For="@(() => tray.Gender)" /></span>
     </div>
     <div class="form-group row">
         <label class="control-label col-md-12">Department</label>
         <div class="col-md-4">
-            <input class="form-control" @bind="emp.Department" />
+            <input class="form-control" @bind="tray.Department" />
         </div>
-        <span><ValidationMessage For="@(() => emp.Department)" /></span>
+        <span><ValidationMessage For="@(() => tray.Department)" /></span>
     </div>
     <div class="form-group row">
         <label class="control-label col-md-12">City</label>
         <div class="col-md-4">
-            <input class="form-control" @bind="emp.City" />
+            <input class="form-control" @bind="tray.City" />
         </div>
-        <span><ValidationMessage For="@(() => emp.City)" /></span>
+        <span><ValidationMessage For="@(() => tray.City)" /></span>
     </div>
     <div class="form-group row">
         <label class="control-label col-md-12">Sowing Date</label>
         <div class="col-md-4">
-            <input class="form-control" @bind="emp.SowingDate" />
+            <input class="form-control" @bind="tray.SowingDate" />
         </div>
-        <span><ValidationMessage For="@(() => emp.SowingDate)" /></span>
+        <span><ValidationMessage For="@(() => tray.SowingDate)" /></span>
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Save</button>
@@ -55,18 +55,18 @@
 
 @code {
     [Parameter]
-    public int empID { get; set; }
+    public int trayID { get; set; }
 
-    Tray emp = new Tray();
+    Tray tray = new Tray();
 
     protected override async Task OnInitializedAsync()
     {
-        emp = await Http.GetJsonAsync<Tray>("/api/Tray/Details/" + empID);
+        tray = await Http.GetJsonAsync<Tray>("/api/Tray/Details/" + trayID);
     }
 
     protected async Task UpdateTray()
     {
-        await Http.SendJsonAsync(HttpMethod.Put, "api/Tray/Edit", emp);
+        await Http.SendJsonAsync(HttpMethod.Put, "api/Tray/Edit", tray);
         urlNavigationManager.NavigateTo("/fetchtray");
     }
 

@@ -10,7 +10,7 @@
     <a href="/addemployee">Create New</a>
 </p>
 
-@if (empList == null)
+@if (trayList == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -27,18 +27,18 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var emp in empList)
+            @foreach (var tray in trayList)
             {
             <tr>
-                <td>@emp.TrayId</td>
-                <td>@emp.Name</td>
-                <td>@emp.Gender</td>
-                <td>@emp.Department</td>
-                <td>@emp.City</td>
-                <td>@emp.SowingDate</td>
+                <td>@tray.TrayId</td>
+                <td>@tray.Name</td>
+                <td>@tray.Gender</td>
+                <td>@tray.Department</td>
+                <td>@tray.City</td>
+                <td>@tray.SowingDate</td>
                 <td>
-                    <a href='/edittray/@emp.TrayId'>Edit</a>  |
-                    <a href='/delete/@emp.TrayId'>Delete</a>
+                    <a href='/edittray/@tray.TrayId'>Edit</a>  |
+                    <a href='/delete/@tray.TrayId'>Delete</a>
                 </td>
             </tr>
             }
@@ -47,10 +47,10 @@ else
 }
 @code {
 
-    Tray[] empList;
+    Tray[] trayList;
 
     protected override async Task OnInitializedAsync()
     {
-        empList = await Http.GetJsonAsync<Tray[]>("/api/Tray/Index");
+        trayList = await Http.GetJsonAsync<Tray[]>("/api/Tray/Index");
     }
 }
