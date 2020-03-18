@@ -1,0 +1,8 @@
+C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\BlazorCrud\Shared\bin\Debug\netstandard2.1\Growing.Shared.deps.json
+C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\BlazorCrud\Shared\bin\Debug\netstandard2.1\Growing.Shared.dll
+C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\BlazorCrud\Shared\bin\Debug\netstandard2.1\Growing.Shared.pdb
+C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\BlazorCrud\Shared\obj\Debug\netstandard2.1\Growing.Shared.csprojAssemblyReference.cache
+C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\BlazorCrud\Shared\obj\Debug\netstandard2.1\Growing.Shared.AssemblyInfoInputs.cache
+C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\BlazorCrud\Shared\obj\Debug\netstandard2.1\Growing.Shared.AssemblyInfo.cs
+C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\BlazorCrud\Shared\obj\Debug\netstandard2.1\Growing.Shared.dll
+C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\BlazorCrud\Shared\obj\Debug\netstandard2.1\Growing.Shared.pdb

@@ -5,7 +5,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazorCrud.Client
+namespace Growing.Client
 {
     #line hidden
     using System;
@@ -50,14 +50,14 @@ using Microsoft.JSInterop;
 #nullable disable
 #nullable restore
 #line 6 "C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\BlazorCrud\Client\_Imports.razor"
-using BlazorCrud.Client;
+using Growing.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 7 "C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\BlazorCrud\Client\_Imports.razor"
-using BlazorCrud.Client.Shared;
+using Growing.Client.Shared;
 
 #line default
 #line hidden

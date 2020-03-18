@@ -1,10 +1,10 @@
-﻿using BlazorCrud.Shared.Models;
+﻿using Growing.Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorCrud.Server.Interfaces
+namespace Growing.Server.Interfaces
 {
     public interface ITray
     {

@@ -1,5 +1,5 @@
 ﻿@page "/edittray/{trayID:int}"
-@using BlazorCrud.Shared.Models
+@using Growing.Shared.Models
 @inject HttpClient Http
 @inject NavigationManager urlNavigationManager
 
@@ -58,6 +58,8 @@
     public int trayID { get; set; }
 
     Tray tray = new Tray();
+
+   // System.DateTime DateOnly = tray.SowingDate.ToShortDateString();
 
     protected override async Task OnInitializedAsync()
     {

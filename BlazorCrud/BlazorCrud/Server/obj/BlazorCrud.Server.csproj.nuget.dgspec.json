@@ -4,12 +4,12 @@
     "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\BlazorCrud.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj": {
+    "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\Growing.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj",
-        "projectName": "BlazorCrud.Client",
-        "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj",
+        "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\Growing.Client.csproj",
+        "projectName": "Growing.Client",
+        "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\Growing.Client.csproj",
         "packagesPath": "C:\\Users\\gaelb\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\obj\\",
         "projectStyle": "PackageReference",
@@ -32,8 +32,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj": {
-                "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj"
+              "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj": {
+                "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj"
               }
             }
           }
@@ -123,11 +123,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj": {
-                "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj"
+              "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\Growing.Client.csproj": {
+                "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\Growing.Client.csproj"
               },
-              "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj": {
-                "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj"
+              "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj": {
+                "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj"
               }
             }
           }
@@ -172,12 +172,12 @@
         }
       }
     },
-    "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj": {
+    "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj",
-        "projectName": "BlazorCrud.Shared",
-        "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj",
+        "projectName": "Growing.Shared",
+        "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj",
         "packagesPath": "C:\\Users\\gaelb\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\obj\\",
         "projectStyle": "PackageReference",

@@ -1,5 +1,5 @@
 ﻿<linker>
-  <assembly fullname="BlazorCrud.Client">
+  <assembly fullname="Growing.Client">
     <type fullname="*" required="true" />
   </assembly>
 </linker>

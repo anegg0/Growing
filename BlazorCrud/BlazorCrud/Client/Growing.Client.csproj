@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
@@ -12,8 +12,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Blazor.HttpClient" Version="3.2.0-preview1.20073.1" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
   </ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\Shared\BlazorCrud.Shared.csproj" />
+    <ProjectReference Include="..\Shared\Growing.Shared.csproj" />
   </ItemGroup>
 
 </Project>

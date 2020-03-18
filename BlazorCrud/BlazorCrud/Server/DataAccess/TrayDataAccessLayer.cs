@@ -1,12 +1,12 @@
-﻿using BlazorCrud.Server.Interfaces;
-using BlazorCrud.Shared.Models;
+﻿using Growing.Server.Interfaces;
+using Growing.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorCrud.Server.DataAccess
+namespace Growing.Server.DataAccess
 {
     public class TrayDataAccessLayer: ITray
     {

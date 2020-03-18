@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BlazorCrud.Server.Interfaces;
-using BlazorCrud.Shared.Models;
+using Growing.Server.Interfaces;
+using Growing.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace BlazorCrud.Server.Controllers
+namespace Growing.Server.Controllers
 {
     [Route("api/[controller]")]
     public class TrayController : Controller

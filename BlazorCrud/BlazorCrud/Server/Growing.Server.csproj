@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\BlazorCrud.Client.csproj" />
-    <ProjectReference Include="..\Shared\BlazorCrud.Shared.csproj" />
+    <ProjectReference Include="..\Client\Growing.Client.csproj" />
+    <ProjectReference Include="..\Shared\Growing.Shared.csproj" />
   </ItemGroup>
 
 </Project>

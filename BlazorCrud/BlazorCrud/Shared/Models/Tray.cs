@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BlazorCrud.Shared.Models
+namespace Growing.Shared.Models
 {
     public class Tray
     {

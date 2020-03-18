@@ -6964,9 +6964,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj",
-      "projectName": "BlazorCrud.Shared",
-      "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj",
+      "projectName": "Growing.Shared",
+      "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj",
       "packagesPath": "C:\\Users\\gaelb\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\obj\\",
       "projectStyle": "PackageReference",

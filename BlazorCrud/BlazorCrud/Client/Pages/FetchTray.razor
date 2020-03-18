@@ -1,5 +1,5 @@
 ﻿@page "/fetchtray"
-@using BlazorCrud.Shared.Models
+@using Growing.Shared.Models
 @inject HttpClient Http
 
 <h1>Tray Data</h1>
@@ -35,7 +35,7 @@ else
                 <td>@tray.Gender</td>
                 <td>@tray.Department</td>
                 <td>@tray.City</td>
-                <td>@tray.SowingDate</td>
+                <td>@tray.SowingDate.ToShortDateString()</td>
                 <td>
                     <a href='/edittray/@tray.TrayId'>Edit</a>  |
                     <a href='/delete/@tray.TrayId'>Delete</a>

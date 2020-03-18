@@ -1,5 +1,5 @@
-using BlazorCrud.Server.DataAccess;
-using BlazorCrud.Server.Interfaces;
+using Growing.Server.DataAccess;
+using Growing.Server.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
 
-namespace BlazorCrud.Server
+namespace Growing.Server
 {
     public class Startup
     {

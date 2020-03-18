@@ -1613,23 +1613,23 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "BlazorCrud.Client/1.0.0": {
+      "Growing.Client/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "BlazorCrud.Shared": "1.0.0",
+          "Growing.Shared": "1.0.0",
           "Microsoft.AspNetCore.Blazor": "3.2.0-preview1.20073.1",
           "Microsoft.AspNetCore.Blazor.HttpClient": "3.2.0-preview1.20073.1",
           "Pomelo.EntityFrameworkCore.MySql": "3.1.1"
         },
         "compile": {
-          "bin/placeholder/BlazorCrud.Client.dll": {}
+          "bin/placeholder/Growing.Client.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BlazorCrud.Client.dll": {}
+          "bin/placeholder/Growing.Client.dll": {}
         }
       },
-      "BlazorCrud.Shared/1.0.0": {
+      "Growing.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
@@ -1639,10 +1639,10 @@
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
-          "bin/placeholder/BlazorCrud.Shared.dll": {}
+          "bin/placeholder/Growing.Shared.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BlazorCrud.Shared.dll": {}
+          "bin/placeholder/Growing.Shared.dll": {}
         }
       }
     }
@@ -5776,21 +5776,21 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "BlazorCrud.Client/1.0.0": {
+    "Growing.Client/1.0.0": {
       "type": "project",
-      "path": "../Client/BlazorCrud.Client.csproj",
-      "msbuildProject": "../Client/BlazorCrud.Client.csproj"
+      "path": "../Client/Growing.Client.csproj",
+      "msbuildProject": "../Client/Growing.Client.csproj"
     },
-    "BlazorCrud.Shared/1.0.0": {
+    "Growing.Shared/1.0.0": {
       "type": "project",
-      "path": "../Shared/BlazorCrud.Shared.csproj",
-      "msbuildProject": "../Shared/BlazorCrud.Shared.csproj"
+      "path": "../Shared/Growing.Shared.csproj",
+      "msbuildProject": "../Shared/Growing.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "BlazorCrud.Client >= 1.0.0",
-      "BlazorCrud.Shared >= 1.0.0",
+      "Growing.Client >= 1.0.0",
+      "Growing.Shared >= 1.0.0",
       "Microsoft.AspNetCore.Blazor.Server >= 3.2.0-preview1.20073.1",
       "Pomelo.EntityFrameworkCore.MySql >= 3.1.1"
     ]
@@ -5803,9 +5803,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\BlazorCrud.Server.csproj",
-      "projectName": "BlazorCrud.Server",
-      "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\BlazorCrud.Server.csproj",
+      "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\Growing.Server.csproj",
+      "projectName": "Growing.Server",
+      "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\Growing.Server.csproj",
       "packagesPath": "C:\\Users\\gaelb\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Server\\obj\\",
       "projectStyle": "PackageReference",
@@ -5828,11 +5828,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj": {
-              "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj"
+            "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\Growing.Client.csproj": {
+              "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\Growing.Client.csproj"
             },
-            "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj": {
-              "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj"
+            "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj": {
+              "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj"
             }
           }
         }

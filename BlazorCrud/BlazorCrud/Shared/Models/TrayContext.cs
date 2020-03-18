@@ -1,7 +1,7 @@
-﻿using BlazorCrud.Shared.Models;
+﻿using Growing.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorCrud.Server.DataAccess
+namespace Growing.Server.DataAccess
 {
     public class TrayContext : DbContext
     {

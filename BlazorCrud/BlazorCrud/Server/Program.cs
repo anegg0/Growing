@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 
-namespace BlazorCrud.Server
+namespace Growing.Server
 {
     public class Program
     {

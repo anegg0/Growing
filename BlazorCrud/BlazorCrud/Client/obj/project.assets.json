@@ -2178,7 +2178,7 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "BlazorCrud.Shared/1.0.0": {
+      "Growing.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
@@ -2188,10 +2188,10 @@
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
-          "bin/placeholder/BlazorCrud.Shared.dll": {}
+          "bin/placeholder/Growing.Shared.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BlazorCrud.Shared.dll": {}
+          "bin/placeholder/Growing.Shared.dll": {}
         }
       }
     }
@@ -7586,15 +7586,15 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "BlazorCrud.Shared/1.0.0": {
+    "Growing.Shared/1.0.0": {
       "type": "project",
-      "path": "../Shared/BlazorCrud.Shared.csproj",
-      "msbuildProject": "../Shared/BlazorCrud.Shared.csproj"
+      "path": "../Shared/Growing.Shared.csproj",
+      "msbuildProject": "../Shared/Growing.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "BlazorCrud.Shared >= 1.0.0",
+      "Growing.Shared >= 1.0.0",
       "Microsoft.AspNetCore.Blazor >= 3.2.0-preview1.20073.1",
       "Microsoft.AspNetCore.Blazor.Build >= 3.2.0-preview1.20073.1",
       "Microsoft.AspNetCore.Blazor.DevServer >= 3.2.0-preview1.20073.1",
@@ -7610,9 +7610,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj",
-      "projectName": "BlazorCrud.Client",
-      "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\BlazorCrud.Client.csproj",
+      "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\Growing.Client.csproj",
+      "projectName": "Growing.Client",
+      "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\Growing.Client.csproj",
       "packagesPath": "C:\\Users\\gaelb\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Client\\obj\\",
       "projectStyle": "PackageReference",
@@ -7635,8 +7635,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj": {
-              "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\BlazorCrud.Shared.csproj"
+            "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj": {
+              "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\BlazorCrud\\BlazorCrud\\Shared\\Growing.Shared.csproj"
             }
           }
         }
