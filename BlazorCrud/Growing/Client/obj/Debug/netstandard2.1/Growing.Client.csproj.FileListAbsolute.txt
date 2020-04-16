@@ -184,3 +184,4 @@ C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Client\obj\De
 C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Client\obj\Debug\netstandard2.1\blazor\linker.descriptor.xml
 C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Client\obj\Debug\netstandard2.1\blazor\linker.typegranularityconfig.xml
 C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Client\obj\Debug\netstandard2.1\blazor\blazor.boot.json
+C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Client\obj\Debug\netstandard2.1\Growing.Client.csproj.CoreCompileInputs.cache

@@ -6,3 +6,4 @@ C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Shared\obj\De
 C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Shared\obj\Debug\netstandard2.1\Growing.Shared.AssemblyInfo.cs
 C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Shared\obj\Debug\netstandard2.1\Growing.Shared.dll
 C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Shared\obj\Debug\netstandard2.1\Growing.Shared.pdb
+C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Shared\obj\Debug\netstandard2.1\Growing.Shared.csproj.CoreCompileInputs.cache

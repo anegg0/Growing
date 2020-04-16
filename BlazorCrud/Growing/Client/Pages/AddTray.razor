@@ -55,8 +55,10 @@
 
 @code {
     Tray tray = new Tray();
+        
+   // tray.SowingDate = GetTimestamp(DateTime.Now);
 
-    protected async Task CreateTray()
+protected async Task CreateTray()
     {
         await Http.SendJsonAsync(HttpMethod.Post, "/api/Tray/Create", tray);
         urlNavigationManager.NavigateTo("/fetchtray");

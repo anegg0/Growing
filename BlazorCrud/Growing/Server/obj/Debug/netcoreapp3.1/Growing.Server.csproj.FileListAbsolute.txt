@@ -63,3 +63,5 @@ C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Server\obj\De
 C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.csproj.CopyComplete
 C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.dll
 C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.pdb
+C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.csproj.CoreCompileInputs.cache
+C:\Users\gaelb\Documents\Dev\ASPCore.BlazorCrud\BlazorCrud\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.genruntimeconfig.cache
