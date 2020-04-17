@@ -5,6 +5,10 @@ namespace Growing.Shared.Models
 {
     public class Tray
     {
+        public Tray()
+        {
+            SowingDate = DateTime.Now();
+        }
         public int TrayId { get; set; }
         [Required]
         public string Name { get; set; }
@@ -14,11 +18,6 @@ namespace Growing.Shared.Models
         public string Department { get; set; } 
         [Required]
         public string City { get; set; }
-        //public System.DateTime SowingDate { get; set; }
-        public string SowingDate   // property
-        {
-            get { return SowingDate; }   // get method
-            set { SowingDate = System.DateTime.Now.ToLongDateString(); }  // set method
-        }
+        public DateTime SowingDate { get; set; }
     }
 }

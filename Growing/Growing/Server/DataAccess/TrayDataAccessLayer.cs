@@ -31,7 +31,7 @@ namespace Growing.Server.DataAccess
             try
             {
                 db.tblTray.Add(tray);
-                db.SaveChanges(); 
+                db.SaveChanges();
             }
             catch
             {
