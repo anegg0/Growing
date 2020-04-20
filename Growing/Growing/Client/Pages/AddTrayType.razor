@@ -62,7 +62,7 @@
 
     protected async Task CreateTrayType()
     {
-        await Http.SendJsonAsync(HttpMethod.Post, "/api/Tray/Create", trayType);
+        await Http.SendJsonAsync(HttpMethod.Post, "/api/TrayType/Create", trayType);
         urlNavigationManager.NavigateTo("/fetchtraytype");
     }
 
