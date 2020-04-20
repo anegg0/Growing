@@ -7,7 +7,7 @@ namespace Growing.Shared.Models
     {
         public Tray()
         {
-            SowingDate = DateTime.Now();
+            SowingDate = DateTime.Now;
         }
         public int TrayId { get; set; }
         [Required]
@@ -21,3 +21,4 @@ namespace Growing.Shared.Models
         public DateTime SowingDate { get; set; }
     }
 }
+ 

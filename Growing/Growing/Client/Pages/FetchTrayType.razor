@@ -1,0 +1,59 @@
+﻿@page "/fetchtraytype"
+@using Growing.Shared.Models
+@inject HttpClient Http
+
+<h1>Tray Types</h1>
+
+<p>This component demonstrates fetching Tray data from the server.</p>
+
+<p>
+    <a href="/addtraytype">Create New</a>
+</p>
+
+@if (trayTypeList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Handle</th>
+                <th>Length</th>
+                <th>Width</th>
+                <th>Height</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var trayType in trayTypeList)
+            {
+            <tr>
+                <td>@trayType.TrayTypeId</td>
+                <td>@trayType.Name</td>
+                <td>@trayType.Handle</td>
+                <td>@trayType.Length</td>
+                <td>@trayType.Width</td>
+                <td>@trayType.Height</td>
+                <td>@trayType.Notes</td>
+                <td>
+                    <a href='/edittray/@trayType.TrayTypeId'>Edit</a>  |
+                    <a href='/delete/@trayType.TrayTypeId'>Delete</a>
+                </td>
+            </tr>
+            } 
+        </tbody>
+    </table>
+}
+@code {
+
+    TrayType[] trayTypeList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        trayTypeList = await Http.GetJsonAsync<TrayType[]>("/api/TrayType/Index");
+    }
+}

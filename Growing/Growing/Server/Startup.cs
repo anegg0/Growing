@@ -16,7 +16,8 @@ namespace Growing.Server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddTransient<ITray, TrayDataAccessLayer>();
+            services.AddTransient<ITray, TrayDataAccessLayer>(); 
+            services.AddTransient<ITrayType, TrayTypeDataAccessLayer>();
             services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
