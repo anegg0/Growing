@@ -1,0 +1,62 @@
+﻿@page "/delete/{trayTypeID:int}"
+@using Growing.Shared.Models
+@inject HttpClient Http
+@inject NavigationManager urlNavigationManager
+
+<h2>Delete TrayType</h2>
+<h3>Are you sure you want to delete tray type with id : @trayTypeID</h3>
+<br />
+
+<div class="col-md-4">
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td>@trayType.Name</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+    <td>@trayType.Gender</td>
+        </tr>
+        <tr>
+            <td>Department</td>
+    <td>@trayType.Department</td>
+        </tr>
+        <tr>
+            <td>City</td>
+    <td>@trayType.City</td>
+        </tr>
+        <tr>
+            <td>SowingDate</td>
+    <td>@trayType.SowingDate</td>
+        </tr>
+    </table>
+    <div class="form-group">
+        <button class="btn btn-danger" @onclick="(async () => await Delete())">Delete</button>
+        <button class="btn btn-light" @onclick="Cancel">Cancel</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int trayTypeID { get; set; }
+
+    TrayType trayType = new TrayType();
+
+    protected override async Task OnInitializedAsync()
+    {
+        trayType = await Http.GetJsonAsync<Tray>("/api/TrayType/Details/" + trayTypeID);
+    }
+
+    protected async Task Delete()
+    {
+        await Http.DeleteAsync("api/TrayType/Delete/" + Convert.ToInt32(trayID));
+        urlNavigationManager.NavigateTo("/fetchtraytype");
+    }
+
+    void Cancel()
+    {
+        urlNavigationManager.NavigateTo("/fetchtraytype");
+    }
+
+
+}
