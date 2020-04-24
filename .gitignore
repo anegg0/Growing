@@ -1,6 +1,4 @@
-/Growing/bin/*
-/Growing/obj/*
-/Growing/Growing/Client/bin/*
-/Growing/Growing/Client/obj/*
-/Growing/Growing/Server/bin/*
-/Growing/Growing/Server/obj/*
+Growing/Growing/Client/bin/*
+Growing/Growing/Client/obj/*
+Growing/Growing/Server/bin/*
+Growing/Growing/Server/obj/*
