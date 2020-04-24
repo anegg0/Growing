@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pUXNIQ4isL7+GoQFByurwX5+9Oo9NTJVO5tgz/70lbG/ACwRjiNRQNkmk40qvIWE7f+EmpmnJeSINrSouHq+RQ==",
+  "dgSpecHash": "tcocEGySFoU1U0yXUNzfKfDPSn123MhHCx7llnDSwdQdP4w1xJX7SFKQQNVeu9EWn9anHi0XOXN6BL1yyPCXJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Client\\Growing.Client.csproj",
+  "projectFilePath": "C:\\Users\\gaelb\\Documents\\Dev\\Growing\\Growing\\Growing\\Client\\Growing.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gaelb\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.0\\microsoft.aspnetcore.authorization.3.1.0.nupkg.sha512",
     "C:\\Users\\gaelb\\.nuget\\packages\\microsoft.aspnetcore.blazor\\3.2.0-preview1.20073.1\\microsoft.aspnetcore.blazor.3.2.0-preview1.20073.1.nupkg.sha512",
