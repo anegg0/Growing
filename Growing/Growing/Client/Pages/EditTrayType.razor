@@ -1,0 +1,82 @@
+﻿@page "/edittraytype/{traytypeID:int}"
+@using Growing.Shared.Models
+@inject HttpClient Http
+@inject NavigationManager urlNavigationManager
+
+<h2>Edit Tray Type</h2>
+<hr />
+
+<EditForm Model="@trayType" OnValidSubmit="UpdateTrayType">
+    <DataAnnotationsValidator />
+    <div class="form-group row">
+        <label class="control-label col-md-12">Name</label>
+        <div class="col-md-4">
+            <input class="form-control" @bind="trayType.Name" />
+        </div>
+    <ValidationMessage For="@(() => trayType.Name)" />
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12">Handle</label>
+        <div class="col-md-4">
+    <input class="form-control" @bind="trayType.Handle" />
+        </div>
+        <span><ValidationMessage For="@(() => tray.Handle)" /></span>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12">Length</label>
+        <div class="col-md-4">
+    <input class="form-control" @bind="trayType.Length" />
+        </div>
+    <span><ValidationMessage For="@(() => trayType.Length)" /></span>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12">Width</label>
+        <div class="col-md-4">
+    <input class="form-control" @bind="trayType.Width" />
+        </div>
+    <span><ValidationMessage For="@(() => trayType.Width)" /></span>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12">Heigth</label>
+        <div class="col-md-4">
+    <input class="form-control" @bind="trayType.Height" />
+        </div>
+    <span><ValidationMessage For="@(() => trayType.Height)" /></span>
+    </div>
+    <div class="form-group row">
+    <label class="control-label col-md-12">Notes</label>
+    <div class="col-md-4">
+    <input class="form-control" @bind="trayType.Notes" />
+    </div>
+    <span><ValidationMessage For="@(() => trayType.Notes)" /></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button class="btn btn-light" @onclick="Cancel">Cancel</button>
+    </div>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int trayTypeID { get; set; }
+
+    TrayType trayType = new TrayType();
+
+   // System.DateTime DateOnly = tray.SowingDate.ToShortDateString();
+
+    protected override async Task OnInitializedAsync()
+    {
+        trayType = await Http.GetJsonAsync<TrayType>("/api/TrayType/Details/" + trayTypeID);
+    }
+
+    protected async Task UpdateTrayType()
+    {
+        await Http.SendJsonAsync(HttpMethod.Put, "api/TrayType/Edit", trayType);
+        urlNavigationManager.NavigateTo("/fetchtraytype");
+    }
+
+    void Cancel()
+    {
+        urlNavigationManager.NavigateTo("/fetchtraytype");
+    }
+}
