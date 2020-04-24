@@ -1,39 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Server\\Growing.Server.csproj": {}
+    "/home/anegg0/Dev/Growing/Growing/Growing/Server/Growing.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Client\\Growing.Client.csproj": {
+    "/home/anegg0/Dev/Growing/Growing/Growing/Client/Growing.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Client\\Growing.Client.csproj",
+        "projectUniqueName": "/home/anegg0/Dev/Growing/Growing/Growing/Client/Growing.Client.csproj",
         "projectName": "Growing.Client",
-        "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Client\\Growing.Client.csproj",
-        "packagesPath": "C:\\Users\\gaelb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Client\\obj\\",
+        "projectPath": "/home/anegg0/Dev/Growing/Growing/Growing/Client/Growing.Client.csproj",
+        "packagesPath": "/home/anegg0/.nuget/packages/",
+        "outputPath": "/home/anegg0/Dev/Growing/Growing/Growing/Client/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gaelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/home/anegg0/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Shared\\Growing.Shared.csproj": {
-                "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Shared\\Growing.Shared.csproj"
+              "/home/anegg0/Dev/Growing/Growing/Growing/Shared/Growing.Shared.csproj": {
+                "projectPath": "/home/anegg0/Dev/Growing/Growing/Growing/Shared/Growing.Shared.csproj"
               }
             }
           }
@@ -80,54 +73,41 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/anegg0/dotnet/sdk/3.1.100-preview1-014459/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Server\\Growing.Server.csproj": {
+    "/home/anegg0/Dev/Growing/Growing/Growing/Server/Growing.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Server\\Growing.Server.csproj",
+        "projectUniqueName": "/home/anegg0/Dev/Growing/Growing/Growing/Server/Growing.Server.csproj",
         "projectName": "Growing.Server",
-        "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Server\\Growing.Server.csproj",
-        "packagesPath": "C:\\Users\\gaelb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Server\\obj\\",
+        "projectPath": "/home/anegg0/Dev/Growing/Growing/Growing/Server/Growing.Server.csproj",
+        "packagesPath": "/home/anegg0/.nuget/packages/",
+        "outputPath": "/home/anegg0/Dev/Growing/Growing/Growing/Server/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gaelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/home/anegg0/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Client\\Growing.Client.csproj": {
-                "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Client\\Growing.Client.csproj"
+              "/home/anegg0/Dev/Growing/Growing/Growing/Client/Growing.Client.csproj": {
+                "projectPath": "/home/anegg0/Dev/Growing/Growing/Growing/Client/Growing.Client.csproj"
               },
-              "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Shared\\Growing.Shared.csproj": {
-                "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Shared\\Growing.Shared.csproj"
+              "/home/anegg0/Dev/Growing/Growing/Growing/Shared/Growing.Shared.csproj": {
+                "projectPath": "/home/anegg0/Dev/Growing/Growing/Growing/Shared/Growing.Shared.csproj"
               }
             }
           }
@@ -168,33 +148,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/anegg0/dotnet/sdk/3.1.100-preview1-014459/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Shared\\Growing.Shared.csproj": {
+    "/home/anegg0/Dev/Growing/Growing/Growing/Shared/Growing.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Shared\\Growing.Shared.csproj",
+        "projectUniqueName": "/home/anegg0/Dev/Growing/Growing/Growing/Shared/Growing.Shared.csproj",
         "projectName": "Growing.Shared",
-        "projectPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Shared\\Growing.Shared.csproj",
-        "packagesPath": "C:\\Users\\gaelb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Shared\\obj\\",
+        "projectPath": "/home/anegg0/Dev/Growing/Growing/Growing/Shared/Growing.Shared.csproj",
+        "packagesPath": "/home/anegg0/.nuget/packages/",
+        "outputPath": "/home/anegg0/Dev/Growing/Growing/Growing/Shared/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gaelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/home/anegg0/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -238,18 +211,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/anegg0/dotnet/sdk/3.1.100-preview1-014459/RuntimeIdentifierGraph.json"
         }
       }
     }
