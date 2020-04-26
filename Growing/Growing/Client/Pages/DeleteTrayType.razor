@@ -1,10 +1,10 @@
-﻿@page "/delete/{TrayTypeID:int}"
+﻿@page "/deletetraytype/{trayTypeID:int}"
 @using Growing.Shared.Models
 @inject HttpClient Http
 @inject NavigationManager urlNavigationManager
 
-<h2>Delete TrayType</h2>
-<h3>Are you sure you want to delete tray type with id : @trayTypeID</h3>
+<h2>Delete Tray Type</h2>
+<h3>Are you sure you want to delete tray with id : @trayTypeID</h3>
 <br />
 
 <div class="col-md-4">
@@ -14,24 +14,24 @@
             <td>@trayType.Name</td>
         </tr>
         <tr>
-            <td>Handle</td>
-    <td>@trayType.Handle</td>
+            <td>Gender</td>
+            <td>@trayType.Handle</td>
         </tr>
         <tr>
-            <td>Length</td>
-    <td>@trayType.Length</td>
+            <td>Department</td>
+            <td>@trayType.Length</td>
         </tr>
         <tr>
-            <td>Width</td>
-    <td>@trayType.Width</td>
+            <td>City</td>
+            <td>@trayType.Width</td>
         </tr>
         <tr>
-    <td>Height</td>
-    <td>@trayType.Height</td>
-    </tr>
-    <tr>
-            <td>Notes</td>
-    <td>@trayType.Notes</td>
+            <td>SowingDate</td>
+            <td>@trayType.Height</td>
+        </tr>
+        <tr>
+            <td>SowingDate</td>
+            <td>@trayType.Notes</td>
         </tr>
     </table>
     <div class="form-group">

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JskOjoJS3GQG/n5pk+rpZsElkWxZ2imMGY5gkr/yzF7wZVD90t+s39PJW7sAN2HZyLQvgVO94q3dZ1IdAqi0dw==",
+  "dgSpecHash": "SuQxlgsRA0bDjMFP0ae3nZRkJXrh/mpDREliC8v5AnTtY7skhCqjkcVt+eY31Fgk5NIXLkSGVfzfJhoGDa/S9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gaelb\\Documents\\Dev\\ASPCore.BlazorCrud\\Growing\\Growing\\Shared\\Growing.Shared.csproj",
+  "projectFilePath": "C:\\Users\\gaelb\\Documents\\Dev\\Growing\\Growing\\Growing\\Shared\\Growing.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gaelb\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\gaelb\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
