@@ -17,29 +17,27 @@
         <ValidationMessage For="@(() => tray.Name)" />
     </div>
     <div class="form-group row">
-        <label class="control-label col-md-12">Gender</label>
+        <label class="control-label col-md-12">Tray type</label>
         <div class="col-md-4">
-            <select class="form-control" @bind="tray.Gender">
-                <option value="">-- Select Gender --</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+    @if (trayTypes == null)
+{
+    <select class="custom-select" disabled>
+    <option>(loading...)</option>
+    </select>
+}
+else
+{
+    <select class="custom-select" @onchange="TrayTypeSelected">
+        <option value="-1" disabled selected>(select)</option>
+        @for (var i = 0; i < toppings.Count; i++)
+        {
+            <option value="@i">@toppings[i].Name - (£@(toppings[i].GetFormattedPrice()))</option>
+        }
+    </select>
+          }
             </select>
         </div>
         <ValidationMessage For="@(() => tray.Gender)" />
-    </div>
-    <div class="form-group row">
-        <label class="control-label col-md-12">Department</label>
-        <div class="col-md-4">
-            <input class="form-control" @bind="tray.Department" />
-        </div>
-        <ValidationMessage For="@(() => tray.Department)" />
-    </div>
-    <div class="form-group row">
-        <label class="control-label col-md-12">City</label>
-        <div class="col-md-4">
-            <input class="form-control" @bind="tray.City" />
-        </div>
-        <ValidationMessage For="@(() => tray.City)" />
     </div>
     <div class="form-group row">
         <label class="control-label col-md-12">Sowing Date</label>
@@ -63,8 +61,27 @@
         urlNavigationManager.NavigateTo("/fetchtray");
     }
 
+       }
+
+
+    // void TrayTypeSelected(ChangeEventArgs e)
+    // {
+    //     if (int.TryParse((string)e.Value, out var index) && index >= 0)
+    //     {
+    //         AddTopping(toppings[index]);
+    //     }
+    // }
+
     void Cancel()
     {
         urlNavigationManager.NavigateTo("/fetchtray");
     }
+
+    List<TrayType> trayTypes;
+
+    protected async override Task OnInitializedAsync()
+    {
+        trayTypes = await HttpClient.GetFromJsonAsync<List<TrayType>>("trayTypes");
+    }
+
 }
