@@ -16,6 +16,7 @@
         </div>
         <ValidationMessage For="@(() => tray.Name)" />
     </div>
+
         <label class="control-label col-md-12">Tray type</label>
         <div class="col-md-4">
     @if (trayType == null)
@@ -63,13 +64,13 @@ else
        }
 
 
-    // void TrayTypeSelected(ChangeEventArgs e)
-    // {
-    //     if (int.TryParse((string)e.Value, out var index) && index >= 0)
-    //     {
-    //         AddTopping(toppings[index]);
-    //     }
-    // }
+     void TrayTypeSelected(ChangeEventArgs e)
+     {
+         if (int.TryParse((string)e.Value, out var index) && index >= 0)
+         {
+             AddTrayType(trayTypes[index]);
+         }
+     }
 
     void Cancel()
     {
