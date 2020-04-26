@@ -19,7 +19,7 @@
     <div class="form-group row">
         <label class="control-label col-md-12">Tray type</label>
         <div class="col-md-4">
-    @if (trayTypes == null)
+    @if (trayType == null)
 {
     <select class="custom-select" disabled>
     <option>(loading...)</option>
@@ -29,9 +29,9 @@ else
 {
     <select class="custom-select" @onchange="TrayTypeSelected">
         <option value="-1" disabled selected>(select)</option>
-        @for (var i = 0; i < toppings.Count; i++)
+        @for (var i = 0; i < trayType.Count; i++)
         {
-            <option value="@i">@toppings[i].Name - (£@(toppings[i].GetFormattedPrice()))</option>
+            <option value="@i">@trayType[i].Name - (£@(trayType[i].GetFormattedPrice()))</option>
         }
     </select>
           }
