@@ -82,7 +82,7 @@
     {
     
         trayType = await HttpClient.GetFromJsonAsync<List<TrayType>>("trayType");
+        Console.WriteLine(trayType);
     }
 
-    Console.WriteLine(trayType);
 }
