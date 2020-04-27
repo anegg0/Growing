@@ -1,6 +1,9 @@
 ﻿@page "/addtray"
 @using Growing.Shared.Models
-@using System 
+@using System
+@using System.Net.Http.Json
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Web
 @inject HttpClient Http
 @inject NavigationManager urlNavigationManager
 
@@ -17,24 +20,24 @@
         <ValidationMessage For="@(() => tray.Name)" />
     </div>
 
-        <label class="control-label col-md-12">Tray type</label>
-        <div class="col-md-4">
-    @if (trayType == null)
-{
-    <select class="custom-select" disabled>
-    <option>(loading...)</option>
-    </select>
-}
-else
-{
-    <select class="custom-select" @onchange="TrayTypeSelected">
-        <option value="-1" disabled selected>(select)</option>
-        @for (var i = 0; i < trayType.Count; i++)
+    <label class="control-label col-md-12">Tray type</label>
+    <div class="col-md-4">
+        @if (trayType == null)
         {
-            <option value="@i">@trayType[i].Name - (£@(trayType[i].GetFormattedPrice()))</option>
+        <select class="custom-select" disabled>
+            <option>(loading...)</option>
+        </select>
         }
-    </select>
-}
+        else
+        {
+        <select class="custom-select" @onchange="TrayTypeSelected">
+            <option value="-1" disabled selected>(select)</option>
+            @for (var i = 0; i < trayType.Count; i++)
+            {
+            <option value="@i">@trayType[i].Name - (£@(trayType[i].Name))</option>
+            }
+        </select>
+        }
         <ValidationMessage For="@(() => tray.Gender)" />
     </div>
 
@@ -56,32 +59,29 @@ else
 
     protected async Task CreateTray()
     {
-        await Http.SendJsonAsync(HttpMethod.Post, "/api/Tray/Create", tray);
-        urlNavigationManager.NavigateTo("/fetchtray");
+    await Http.SendJsonAsync(HttpMethod.Post, "/api/Tray/Create", tray);
+    urlNavigationManager.NavigateTo("/fetchtray");
     }
 
-       }
-
-
-     void TrayTypeSelected(ChangeEventArgs e)
-     {
-         if (int.TryParse((string)e.Value, out var index) && index >= 0)
-         {
-             AddTrayType(trayType[index]);
-         }
-     }
+    void TrayTypeSelected(ChangeEventArgs e)
+    {
+    if (int.TryParse((string)e.Value, out var index) && index >= 0)
+    {
+    // AddTrayType(trayType[index]);
+    }
+    }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchtray");
+    urlNavigationManager.NavigateTo("/fetchtray");
     }
 
-  List List<TrayType> trayTypes;
+    List<TrayType> trayType;
 
     protected async override Task OnInitializedAsync()
     {
-        trayType = await HttpClient.GetFromJsonAsync<List<TrayType>>("trayType");
-    }
 
+    trayType = await HttpClient.GetFromJsonAsync<List<TrayType>>("trayType");
+    }
 
 }
