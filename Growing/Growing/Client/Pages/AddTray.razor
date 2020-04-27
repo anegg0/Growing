@@ -84,7 +84,7 @@
         trayType = await HttpClient.GetFromJsonAsync<List<TrayType>>("trayType");
         Console.WriteLine(trayType);
     }
-    protected async override Task TrayTypeSelected()
+    protected async  Task TrayTypeSelected()
     {
     
         Console.WriteLine(trayType);
