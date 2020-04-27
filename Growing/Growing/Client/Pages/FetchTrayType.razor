@@ -1,6 +1,6 @@
 ﻿@page "/fetchtraytype"
 @using Growing.Shared.Models
-@inject HttpClient Http
+@inject HttpClient HttpClient
 
 <h1>Tray Types</h1>
 
@@ -54,6 +54,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        trayTypeList = await Http.GetJsonAsync<TrayType[]>("/api/TrayType/Index");
+        trayTypeList = await HttpClient.GetFromJsonAsync<TrayType[]>("/api/TrayType/Index");
     }
 }

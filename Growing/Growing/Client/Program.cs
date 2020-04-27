@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Text;
 using Microsoft.AspNetCore.Blazor.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using System.Net.Http.Json;
 
 namespace Growing.Client
 {
@@ -13,7 +14,6 @@ namespace Growing.Client
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("app");
-
             await builder.Build().RunAsync();
         }
     }
