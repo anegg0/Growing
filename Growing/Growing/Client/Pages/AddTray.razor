@@ -31,7 +31,7 @@ else
         <option value="-1" disabled selected>(select)</option>
         @for (var i = 0; i < trayType.Count; i++)
         {
-            <option value="@i">@trayType[i].Name - (£@(trayType[i].GetFormattedPrice()))</option>
+            <option value="@i">@trayType[i].Name - (£@(trayType[i].Name()))</option>
         }
     </select>
 }
@@ -76,7 +76,7 @@ else
         urlNavigationManager.NavigateTo("/fetchtray");
     }
 
-  List List<TrayType> trayTypes;
+    List<TrayType> trayTypes;
 
     protected async override Task OnInitializedAsync()
     {
