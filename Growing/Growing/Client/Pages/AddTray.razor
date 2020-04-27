@@ -38,7 +38,7 @@
             }
         </select>
         }
-        <ValidationMessage For="@(() => trayType.Name)" />
+        <ValidationMessage For="@(() => TrayType.Name)" />
     </div>
 
     <div class="form-group row">
@@ -67,7 +67,7 @@
     {
     if (int.TryParse((string)e.Value, out var index) && index >= 0)
     {
-    // AddTrayType(trayType[index]);
+      AddTrayType(trayType[index]);
     }
     }
 
