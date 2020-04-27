@@ -80,7 +80,8 @@ else
 
     protected async override Task OnInitializedAsync()
     {
-        trayTypes = await HttpClient.GetFromJsonAsync<List<TrayType>>("trayTypes");
+        trayType = await HttpClient.GetFromJsonAsync<List<TrayType>>("trayType");
     }
+
 
 }
