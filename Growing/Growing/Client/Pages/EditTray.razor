@@ -1,6 +1,6 @@
 ﻿@page "/edittray/{trayID:int}"
 @using Growing.Shared.Models
-@inject HttpClient Http
+@inject HttpClient HttpClient
 @inject NavigationManager urlNavigationManager
 
 <h2>Edit Tray</h2>
@@ -63,12 +63,12 @@
 
     protected override async Task OnInitializedAsync()
     {
-        tray = await Http.GetJsonAsync<Tray>("/api/Tray/Details/" + trayID);
+        tray = await HttpClient.GetFromJsonAsync<Tray>("/api/Tray/Details/" + trayID);
     }
 
     protected async Task UpdateTray()
     {
-        await Http.SendJsonAsync(HttpMethod.Put, "api/Tray/Edit", tray);
+        await HttpClient.PutAsJsonAsync("api/Tray/Edit", tray);
         urlNavigationManager.NavigateTo("/fetchtray");
     }
 

@@ -1,6 +1,6 @@
 ﻿@page "/fetchtray"
 @using Growing.Shared.Models
-@inject HttpClient Http
+@inject HttpClient HttpClient
 
 <h1>Tray Data</h1>
 
@@ -51,6 +51,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        trayList = await Http.GetJsonAsync<Tray[]>("/api/Tray/Index");
+        trayList = await HttpClient.GetFromJsonAsync<Tray[]>("/api/Tray/Index");
     }
 }

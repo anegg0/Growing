@@ -1,7 +1,7 @@
 ﻿@page "/addtraytype"
 @using Growing.Shared.Models
 @using System 
-@inject HttpClient Http
+@inject HttpClient HttpClient
 @inject NavigationManager urlNavigationManager
 
 <h1>Create Tray Type</h1>
@@ -62,7 +62,7 @@
 
     protected async Task CreateTrayType()
     {
-        await Http.SendJsonAsync(HttpMethod.Post, "/api/TrayType/Create", trayType);
+        await HttpClient.PostAsJsonAsync("/api/TrayType/Create", trayType);
         urlNavigationManager.NavigateTo("/fetchtraytype");
     }
 

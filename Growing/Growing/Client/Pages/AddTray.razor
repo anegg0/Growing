@@ -4,7 +4,7 @@
 @using System.Net.Http.Json
 @using Microsoft.AspNetCore.Components.Forms
 @using Microsoft.AspNetCore.Components.Web
-@inject HttpClient Http
+@inject HttpClient HttpClient
 @inject NavigationManager urlNavigationManager
 
 <h1>Create Tray</h1>
@@ -59,8 +59,8 @@
 
     protected async Task CreateTray()
     {
-    await Http.SendJsonAsync(HttpMethod.Post, "/api/Tray/Create", tray);
-    urlNavigationManager.NavigateTo("/fetchtray");
+        await HttpClient.PostAsJsonAsync("/api/Tray/Create", tray);
+        urlNavigationManager.NavigateTo("/fetchtray");
     }
 
     void TrayTypeSelected(ChangeEventArgs e)
@@ -80,8 +80,8 @@
 
     protected async override Task OnInitializedAsync()
     {
-
-    trayType = await HttpClient.GetFromJsonAsync<List<TrayType>>("trayType");
+    
+        trayType = await HttpClient.GetFromJsonAsync<List<TrayType>>("trayType");
     }
 
 }

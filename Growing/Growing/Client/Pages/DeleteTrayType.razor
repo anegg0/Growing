@@ -1,6 +1,6 @@
 ﻿@page "/deletetraytype/{trayTypeID:int}"
 @using Growing.Shared.Models
-@inject HttpClient Http
+@inject HttpClient HttpClient
 @inject NavigationManager urlNavigationManager
 
 <h2>Delete Tray Type</h2>
@@ -48,12 +48,12 @@
 
     protected override async Task OnInitializedAsync()
     {
-        trayType = await Http.GetJsonAsync<TrayType>("/api/TrayType/Details/" + trayTypeID);
+        trayType = await HttpClient.GetFromJsonAsync<TrayType>("/api/TrayType/Details/" + trayTypeID);
     }
 
     protected async Task Delete()
     {
-        await Http.DeleteAsync("api/TrayType/Delete/" + Convert.ToInt32(trayTypeID));
+        await HttpClient.DeleteAsync("api/TrayType/Delete/" + Convert.ToInt32(trayTypeID));
         urlNavigationManager.NavigateTo("/fetchtraytype");
     }
 
