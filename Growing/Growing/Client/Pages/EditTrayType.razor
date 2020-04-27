@@ -1,6 +1,6 @@
 ﻿@page "/edittraytype/{traytypeID:int}"
 @using Growing.Shared.Models
-@inject HttpClient Http
+@inject HttpClient HttpClient
 @inject NavigationManager urlNavigationManager
 
 <h2>Edit Tray Type</h2>
@@ -66,12 +66,12 @@
 
     protected override async Task OnInitializedAsync()
     {
-        trayType = await Http.GetJsonAsync<TrayType>("/api/TrayType/Details/" + trayTypeID);
+        trayType = await HttpClient.GetFromJsonAsync<TrayType>("/api/TrayType/Details/" + trayTypeID);
     }
 
     protected async Task UpdateTrayType()
     {
-        await Http.SendJsonAsync(HttpMethod.Put, "api/TrayType/Edit", trayType);
+        await HttpClient.PutAsJsonAsync("api/TrayType/Edit", trayType);
         urlNavigationManager.NavigateTo("/fetchtraytype");
     }
 
