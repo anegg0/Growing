@@ -61,13 +61,13 @@
               "target": "Package",
               "version": "[3.2.0-preview1.20073.1, )"
             },
-            "Microsoft.AspNetCore.Blazor.HttpClient": {
-              "target": "Package",
-              "version": "[3.2.0-preview1.20073.1, )"
-            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[3.2.0-preview3.20175.8, )"
             }
           },
           "imports": [
@@ -148,6 +148,10 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[5.0.0-preview.3.20214.6, )"
             }
           },
           "imports": [

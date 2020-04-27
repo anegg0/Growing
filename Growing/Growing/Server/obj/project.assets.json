@@ -30,18 +30,6 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.Blazor.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Blazor.HttpClient/3.2.0-preview1.20073.1": {
-        "type": "package",
-        "dependencies": {
-          "System.Text.Json": "4.7.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Blazor.HttpClient.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Blazor.HttpClient.dll": {}
-        }
-      },
       "Microsoft.AspNetCore.Blazor.Server/3.2.0-preview1.20073.1": {
         "type": "package",
         "dependencies": {
@@ -887,6 +875,18 @@
           "lib/netstandard1.6/System.Linq.dll": {}
         }
       },
+      "System.Net.Http.Json/5.0.0-preview.3.20214.6": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "5.0.0-preview.3.20214.6"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Net.Http.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Net.Http.Json.dll": {}
+        }
+      },
       "System.Net.NameResolution/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1107,10 +1107,10 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+      "System.Runtime.CompilerServices.Unsafe/5.0.0-preview.3.20214.6": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -1456,8 +1456,21 @@
           "ref/netstandard1.3/_._": {}
         }
       },
-      "System.Text.Json/4.7.0": {
+      "System.Text.Encodings.Web/5.0.0-preview.3.20214.6": {
         "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Text.Encodings.Web.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Text.Encodings.Web.dll": {}
+        }
+      },
+      "System.Text.Json/5.0.0-preview.3.20214.6": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0-preview.3.20214.6",
+          "System.Text.Encodings.Web": "5.0.0-preview.3.20214.6"
+        },
         "compile": {
           "lib/netcoreapp3.0/System.Text.Json.dll": {}
         },
@@ -1619,8 +1632,8 @@
         "dependencies": {
           "Growing.Shared": "1.0.0",
           "Microsoft.AspNetCore.Blazor": "3.2.0-preview1.20073.1",
-          "Microsoft.AspNetCore.Blazor.HttpClient": "3.2.0-preview1.20073.1",
-          "Pomelo.EntityFrameworkCore.MySql": "3.1.1"
+          "Pomelo.EntityFrameworkCore.MySql": "3.1.1",
+          "System.Net.Http.Json": "3.2.0-preview3.20175.8"
         },
         "compile": {
           "bin/placeholder/Growing.Client.dll": {}
@@ -1676,20 +1689,6 @@
         "lib/netstandard2.1/Microsoft.AspNetCore.Blazor.dll",
         "microsoft.aspnetcore.blazor.3.2.0-preview1.20073.1.nupkg.sha512",
         "microsoft.aspnetcore.blazor.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Blazor.HttpClient/3.2.0-preview1.20073.1": {
-      "sha512": "Zc4JRv7D3WZlWk7Vd2crO6tSsz+mZp+HWTCNkb1F1WRTJ998y2cMCQEKA0JIpJeb6PWjT/Cd62l0c2+Ex2os2w==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.blazor.httpclient/3.2.0-preview1.20073.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.txt",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Blazor.HttpClient.dll",
-        "microsoft.aspnetcore.blazor.httpclient.3.2.0-preview1.20073.1.nupkg.sha512",
-        "microsoft.aspnetcore.blazor.httpclient.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Blazor.Server/3.2.0-preview1.20073.1": {
@@ -3630,6 +3629,28 @@
         "system.linq.nuspec"
       ]
     },
+    "System.Net.Http.Json/5.0.0-preview.3.20214.6": {
+      "sha512": "BKRYTbqQj+EGPdIYV9mqFMdaBArkzFDvYgWqpWat8BKi2QkMCE9gBoCWZiAqXkqx/wjOKWWOitqYTmwxX5L3Pg==",
+      "type": "package",
+      "path": "system.net.http.json/5.0.0-preview.3.20214.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp5.0/System.Net.Http.Json.dll",
+        "lib/netcoreapp5.0/System.Net.Http.Json.xml",
+        "lib/netstandard2.0/System.Net.Http.Json.dll",
+        "lib/netstandard2.0/System.Net.Http.Json.xml",
+        "ref/netcoreapp5.0/System.Net.Http.Json.dll",
+        "ref/netstandard2.0/System.Net.Http.Json.dll",
+        "system.net.http.json.5.0.0-preview.3.20214.6.nupkg.sha512",
+        "system.net.http.json.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Net.NameResolution/4.3.0": {
       "sha512": "bjZJE2/to0wepmYcIePVMjnYLGFsSkUm0LkCKXMq5lPaPT0KB99ifqdFZI+WimEgnSgU8xJeMfAi2fEnAQVDnA==",
       "type": "package",
@@ -4313,28 +4334,31 @@
         "version.txt"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.0": {
-      "sha512": "YrzNWduCDHhUaSRBxHxL11UkM2fD6y8hITHis4/LbQZ6vj3vdRjoH3IoPWWC9uDXK2wHIqn+b5gv1Np/VKyM1g==",
+    "System.Runtime.CompilerServices.Unsafe/5.0.0-preview.3.20214.6": {
+      "sha512": "6+xHUBiSis4pr9KjmWWSbNNd3IWXo0CU8Yq4O23B+zuoZ7aml4jTDJJ0c7nnJloCRbA8372lYlhH9qyo5ZTc5A==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.5.0",
+      "path": "system.runtime.compilerservices.unsafe/5.0.0-preview.3.20214.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "lib/uap10.0.16300/_._",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "ref/uap10.0.16300/_._",
-        "system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.5.0.0-preview.3.20214.6.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -5271,13 +5295,38 @@
         "system.text.encoding.extensions.nuspec"
       ]
     },
-    "System.Text.Json/4.7.0": {
-      "sha512": "IPq/x/d5nAcnD3vIyM3AbPOaTgcqrh0AqPSx7U53UFu3M6k1TH1u/eXc9/h4jm/3mpP1WRUpevlPY4PACd7AWw==",
+    "System.Text.Encodings.Web/5.0.0-preview.3.20214.6": {
+      "sha512": "kQGsHLRXuHfNZRUrP5+dPocReHUjbeClbcocJTMwHUbaKSTHwY2ONw6splkELstd9PNX1kPXHrMXBIO8eLYuHA==",
       "type": "package",
-      "path": "system.text.json/4.7.0",
+      "path": "system.text.encodings.web/5.0.0-preview.3.20214.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.0/System.Text.Encodings.Web.dll",
+        "lib/netcoreapp3.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard1.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard1.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.1/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.1/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.5.0.0-preview.3.20214.6.nupkg.sha512",
+        "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Text.Json/5.0.0-preview.3.20214.6": {
+      "sha512": "nyqF/cBWulgMCTYuW122xmf22OQW1dMhYDniEZDQenGZ86MgueUR3Cw9WlkQMRyyKhRkYB/IsPoBUaOuNjQTCA==",
+      "type": "package",
+      "path": "system.text.json/5.0.0-preview.3.20214.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net461/System.Text.Json.dll",
@@ -5286,7 +5335,7 @@
         "lib/netcoreapp3.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.4.7.0.nupkg.sha512",
+        "system.text.json.5.0.0-preview.3.20214.6.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -5792,7 +5841,8 @@
       "Growing.Client >= 1.0.0",
       "Growing.Shared >= 1.0.0",
       "Microsoft.AspNetCore.Blazor.Server >= 3.2.0-preview1.20073.1",
-      "Pomelo.EntityFrameworkCore.MySql >= 3.1.1"
+      "Pomelo.EntityFrameworkCore.MySql >= 3.1.1",
+      "System.Net.Http.Json >= 5.0.0-preview.3.20214.6"
     ]
   },
   "packageFolders": {
@@ -5853,6 +5903,10 @@
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
             "version": "[3.1.1, )"
+          },
+          "System.Net.Http.Json": {
+            "target": "Package",
+            "version": "[5.0.0-preview.3.20214.6, )"
           }
         },
         "imports": [

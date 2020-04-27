@@ -54,8 +54,6 @@ C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\bin\Debug\netcoreapp
 C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\bin\Debug\netcoreapp3.1\Growing.Client.pdb
 C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\bin\Debug\netcoreapp3.1\Growing.Shared.pdb
 C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.csprojAssemblyReference.cache
-C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.csproj.CoreCompileInputs.cache
-C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.AssemblyInfoInputs.cache
 C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.AssemblyInfo.cs
 C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.RazorTargetAssemblyInfo.cache
@@ -65,3 +63,5 @@ C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\obj\Debug\netcoreapp
 C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.dll
 C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.pdb
 C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.genruntimeconfig.cache
+C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.csproj.CoreCompileInputs.cache
+C:\Users\gaelb\Documents\Dev\Growing\Growing\Growing\Server\obj\Debug\netcoreapp3.1\Growing.Server.MvcApplicationPartsAssemblyInfo.cache
