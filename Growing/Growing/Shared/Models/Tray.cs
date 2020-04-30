@@ -13,7 +13,7 @@ namespace Growing.Shared.Models
         [Required]
         public string Name { get; set; }
         [Required]
-        public string Gender { get; set; }
+        public string Traytype { get; set; }
         [Required]
         public string Department { get; set; } 
         [Required]
