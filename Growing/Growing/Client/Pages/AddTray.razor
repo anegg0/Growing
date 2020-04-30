@@ -33,9 +33,9 @@
                 <select class="custom-select" @onchange="ToppingSelected">
                     trayTypeList[1].Name
                     @*<option value="-1" disabled selected>(select)</option>
-                    @for (var i = 0; i < toppings.Count; i++)
+                    @for (var i = 0; i < trayTypeList.Count; i++)
                     {
-                        <option value="@i">@toppings[i].Name - (£@(toppings[i].GetFormattedPrice()))</option>
+                        <option value="@i">@trayTypeList[i].Name</option>
                     }*@
                 </select>
             }
@@ -91,9 +91,20 @@
     {
         if (int.TryParse((string)e.Value, out var index) && index >= 0)
         {
-            AddTopping(toppings[index]);
+            AddTopping(trayTypeList[index]);
         }
     }
+
+    void AddTopping(TrayType[] trayTypeList)
+    {
+                    @for (var i = 0; i < 10; i++)
+                    {
+                             if (trayTypeList[i].Name == null)
+        {
+            jrayType.Toppings.Add(new PizzaTopping() { TrayType = topping });
+        }
+                    }
+     }
 
     protected async Task CreateTray()
     {
