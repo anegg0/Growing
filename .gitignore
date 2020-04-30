@@ -27,6 +27,8 @@ bld/
 [Oo]bj/
 obj/*
 bin/*
+.vs/*
+.vscode/*
 devChainRPCTests/
 testchain/clique/devChain/geth
 testchain/devChain/geth
