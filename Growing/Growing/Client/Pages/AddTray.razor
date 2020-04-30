@@ -81,25 +81,26 @@
         System.Console.WriteLine("pouet" + trayTypeList[1].Name);
     }
 
-    void AddTrayTypeToMenu(TrayType[] trayTypeList)
-    {
-        @for (var i = 0; i < 10; i++)
-        {
-            if (trayTypeList[i].Name == null)
-            {
-                trayType.Toppings.Add(new PizzaTopping() { TrayType = topping });
-            }
-        }
-    }
+    // void AddTrayTypeToMenu(TrayType[] trayTypeList)
+    // {
+    //     @for (var i = 0; i < 10; i++)
+    //     {
+    //         if (trayTypeList[i].Name == null)
+    //         {
+    //             trayTypeList[i].Name.Add(new PizzaTopping() { TrayType = topping });
+    //         }
+    //     }
+    // }
 
-    void TrayTypeSelected(ChangeEventArgs e)
-    {
-        if (int.TryParse((string)e.Value, out var index) && index >= 0)
-        {
-            AddTopping(trayTypeList[index]);
-        }
-    }
+    // void TrayTypeSelected(ChangeEventArgs e)
+    // {
+    //     if (int.TryParse((string)e.Value, out var index) && index >= 0)
+    //     {
+    //         AddTrayTypeToMenu(trayTypeList[index]);
+    //     }
+    // }
 
+     
 
     protected async Task CreateTray()
     {
