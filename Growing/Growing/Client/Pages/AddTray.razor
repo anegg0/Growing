@@ -24,35 +24,21 @@
         <div class="col-md-4">
             @if (trayTypeList == null)
             {
-<<<<<<< HEAD
-            <option value="@i">@trayType[i].Name</option>
-            }
-        </select>
-        }
-=======
                 <select class="custom-select" disabled>
                     <option>(loading...)</option>
                 </select>
             }
             else
             {
-                <select class="custom-select" @onchange="ToppingSelected">
-                    trayTypeList[1].Name
-                    @*<option value="-1" disabled selected>(select)</option>
+                <select class="custom-select" @onchange="TrayTypeSelected">
+                    <option value="-1" disabled selected>(select)</option>
                     @for (var i = 0; i < trayTypeList.Count; i++)
                     {
                         <option value="@i">@trayTypeList[i].Name</option>
-                    }*@
+                    }
                 </select>
             }
         </div>
-            @*<option value="">-- Select Gender --</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            </select>
-        </div>
-        <ValidationMessage For="@(() => tray.Gender)" />*@*@
->>>>>>> 981c184acda3dd2a641506d30f8a1edc8437d39f
     </div>
 
     <div class="form-group row">
@@ -95,7 +81,7 @@
         System.Console.WriteLine("pouet" + trayTypeList[1].Name);
     }
 
-    void AddTopping(TrayType[] trayTypeList)
+    void AddTrayTypeToMenu(TrayType[] trayTypeList)
     {
         @for (var i = 0; i < 10; i++)
         {
@@ -106,7 +92,7 @@
         }
     }
 
-    void ToppingSelected(ChangeEventArgs e)
+    void TrayTypeSelected(ChangeEventArgs e)
     {
         if (int.TryParse((string)e.Value, out var index) && index >= 0)
         {
