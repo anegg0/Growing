@@ -62,6 +62,15 @@
         urlNavigationManager.NavigateTo("/fetchtray");
     }
 
+
+    void AddTopping(Topping topping)
+    {
+        if (Pizza.Toppings.Find(pt => pt.Topping == topping) == null)
+        {
+            Pizza.Toppings.Add(new PizzaTopping() { Topping = topping });
+        }
+    }
+
     void TrayTypeSelected(ChangeEventArgs e)
     {
     if (int.TryParse((string)e.Value, out var index) && index >= 0)
