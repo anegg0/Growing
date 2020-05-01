@@ -74,10 +74,8 @@
 
     protected async void TrayTypeClicked(ChangeEventArgs change)
     {
-        //List <TrayType> trayTypeList; 
 
-       List <TrayType> trayTypeList = await HttpClient.GetFromJsonAsync<List<TrayType>>("/api/TrayType/Index");
-        //trayTypeName = await Http.GetJsonAsync<List<Cities>>("api/Countries/GetCities/" + countryId); this.StateHasChanged();
+        List<TrayType> trayTypeList = await HttpClient.GetFromJsonAsync<List<TrayType>>("/api/TrayType/Index");
     }
 
     protected async Task CreateTray()
