@@ -22,22 +22,15 @@
     <div class="form-group row">
         <label class="control-label col-md-12">Tray Type</label>
         <div class="col-md-4">
-            @if (trayTypeList == null)
-            {
-                <select class="custom-select" disabled>
-                    <option>(loading...)</option>
-                </select>
-            }
-            else
-            {
-                <select class="custom-select" @onchange="TrayTypeSelected">
-                    <option value="-1" disabled selected>(select)</option>
-                    @for (var i = 0; i < trayTypeList.Count; i++)
-                    {
-                        <option value="@i">@trayTypeList[i].Name</option>
-                    }
-                </select>
-            }
+            <select class="form-control" onchange="TrayTypeClicked">
+                <option value=""> --Select Country-- </option>
+                @foreach (var trayType in trayTypeListUponLoad)
+                {
+                    <option value="@trayType.Name">
+                        @trayType.Name
+                    </option>
+                }
+            </select>
         </div>
     </div>
 
@@ -72,35 +65,20 @@
 
     Tray tray = new Tray();
 
-    TrayType[] trayTypeList;
-
+    List<TrayType> trayTypeListUponLoad = new List<TrayType>();
 
     protected override async Task OnInitializedAsync()
     {
-        trayTypeList = await HttpClient.GetFromJsonAsync<TrayType[]>("/api/TrayType/Index");
-        System.Console.WriteLine("pouet" + trayTypeList[1].Name);
+        trayTypeListUponLoad = await HttpClient.GetFromJsonAsync<List<TrayType>>("/api/TrayType/Index");
     }
 
-    // void AddTrayTypeToMenu(TrayType[] trayTypeList)
-    // {
-    //     @for (var i = 0; i < 10; i++)
-    //     {
-    //         if (trayTypeList[i].Name == null)
-    //         {
-    //             trayTypeList[i].Name.Add(new PizzaTopping() { TrayType = topping });
-    //         }
-    //     }
-    // }
+    protected async void TrayTypeClicked(ChangeEventArgs change)
+    {
+        //List <TrayType> trayTypeList; 
 
-    // void TrayTypeSelected(ChangeEventArgs e)
-    // {
-    //     if (int.TryParse((string)e.Value, out var index) && index >= 0)
-    //     {
-    //         AddTrayTypeToMenu(trayTypeList[index]);
-    //     }
-    // }
-
-     
+       List <TrayType> trayTypeList = await HttpClient.GetFromJsonAsync<List<TrayType>>("/api/TrayType/Index");
+        //trayTypeName = await Http.GetJsonAsync<List<Cities>>("api/Countries/GetCities/" + countryId); this.StateHasChanged();
+    }
 
     protected async Task CreateTray()
     {
@@ -112,4 +90,4 @@
     {
         urlNavigationManager.NavigateTo("/fetchtray");
     }
-}
+    }
