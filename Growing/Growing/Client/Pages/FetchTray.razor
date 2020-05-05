@@ -21,7 +21,7 @@ else
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Gender</th>
+                <th>Tray Type</th>
                 <th>Department</th>
                 <th>City</th>
             </tr>
@@ -32,7 +32,7 @@ else
             <tr>
                 <td>@tray.TrayId</td>
                 <td>@tray.Name</td>
-                @*<td>@tray.Gender</td>*@
+                <td>@tray.TrayTypeId </td>
                 <td>@tray.Department</td>
                 <td>@tray.City</td> 
                 <td>@tray.SowingDate</td>
@@ -48,9 +48,10 @@ else
 @code {
 
     Tray[] trayList;
-
+    TrayType[] trayTypeList;
     protected override async Task OnInitializedAsync()
     {
         trayList = await HttpClient.GetFromJsonAsync<Tray[]>("/api/Tray/Index");
+        trayTypeList = await HttpClient.GetFromJsonAsync<TrayType[]>("/api/TrayType/Index");
     }
 }
