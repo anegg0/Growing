@@ -18,14 +18,21 @@
         </div>
         <ValidationMessage For="@(() => tray.Name)" />
     </div>
-
     <div class="form-group row">
             <label class="control-label col-md-12">Tray Type</label>
             <div class="col-md-4">
-                <select class="form-control" @onchange="TrayTypeClicked">
+                <select class="form-control" @onchange="@TrayTypeClicked">
+                           <option>Select TrayType</option>
                     @for (int i = 0; i < trayTypes.Length; i++)
                     {
-                     <option value="@i" selected>@trayTypes[i].Name)</option>
+                        if (i == @trayTypeId)
+                        {
+                           <option value="@i">@trayTypes[i].Name</option>
+                        }
+                        else
+                        {
+                           <option value="@i">@trayTypes[i].Name</option>
+                        }
                     }
                 </select>
             </div>
@@ -61,24 +68,26 @@
 @code {
     [Parameter] public string InitialText { get; set; } = "Select Type";
     Tray tray = new Tray();
-    //List<TrayType> trayTypes;
     TrayType[] trayTypes;
-    private string selectedString { get; set; }
     int trayTypeId { get; set; }
     string trayTypeName { get; set; }
     protected override async Task OnInitializedAsync()
     {
-        //trayTypes = await HttpClient.GetFromJsonAsync<List<TrayType>>("/api/TrayType/Index");
+        trayTypeId = 0;
         trayTypes = await HttpClient.GetFromJsonAsync<TrayType[]>("/api/TrayType/Index");
-
     }
 
     void TrayTypeClicked(ChangeEventArgs trayTypeEvent)
     {
         //trayTypeId = trayTypeEvent.Value.ToString();
         //trayTypeId = int.Parse(trayTypeId);
+        trayTypeId = int.Parse(trayTypeEvent.Value.ToString());
         //trayTypeName = trayTypes.FirstOrDefault(s => s.TrayTypeId == trayTypeId).Name;
-        Console.WriteLine(trayTypeEvent.Value);
+        //trayTypeName = trayTypes.FirstOrDefault(s => s.TrayTypeId == trayTypeId).Name;
+        //Console.WriteLine("trayTypeId: " + trayTypeId);
+        //Console.WriteLine("trayTypeName: " + trayTypeName);
+        //Console.WriteLine("trayTypeLength: " + trayTypes.Length);
+        //Console.WriteLine("trayTypeLength: " + @trayTypes[0].Name);
     }
 
     protected async Task CreateTray()
