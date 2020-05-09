@@ -22,16 +22,16 @@
             <label class="control-label col-md-12">Tray Type</label>
             <div class="col-md-4">
                 <select class="form-control" @onchange="@TrayTypeClicked">
-                           <option>Select TrayType</option>
+                    <option>Select TrayType</option>
                     @for (int i = 0; i < trayTypes.Length; i++)
                     {
                         if (i == @trayTypeId)
                         {
-                           <option value="@i">@trayTypes[i].Name</option>
+                            <option value="@i" selected>@trayTypes[i].Name</option>
                         }
                         else
                         {
-                           <option value="@i" selected>@trayTypes[i].Name</option>
+                            <option value="@i">@trayTypes[i].Name</option>
                         }
                     }
                 </select>
@@ -75,6 +75,9 @@
     {
         trayTypeId = 0;
         trayTypes = await HttpClient.GetFromJsonAsync<TrayType[]>("/api/TrayType/Index");
+        Console.WriteLine(trayTypes[0].Name);
+        Console.WriteLine(trayTypes[1].Name);
+        Console.WriteLine(trayTypes[2].Name);
     }
 
     void TrayTypeClicked(ChangeEventArgs trayTypeEvent)
@@ -84,10 +87,11 @@
         trayTypeId = int.Parse(trayTypeEvent.Value.ToString());
         //trayTypeName = trayTypes.FirstOrDefault(s => s.TrayTypeId == trayTypeId).Name;
         //trayTypeName = trayTypes.FirstOrDefault(s => s.TrayTypeId == trayTypeId).Name;
-        //Console.WriteLine("trayTypeId: " + trayTypeId);
+        Console.WriteLine("trayTypeId: " + trayTypeId);
         //Console.WriteLine("trayTypeName: " + trayTypeName);
         //Console.WriteLine("trayTypeLength: " + trayTypes.Length);
         //Console.WriteLine("trayTypeLength: " + @trayTypes[0].Name);
+        var selected = trayTypes[trayTypeId];
     }
 
     protected async Task CreateTray()
