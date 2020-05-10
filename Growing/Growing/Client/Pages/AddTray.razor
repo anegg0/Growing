@@ -18,23 +18,32 @@
         </div>
         <ValidationMessage For="@(() => tray.Name)" />
     </div>
+                            <tr>
+                                <td>"id=1"</td>
+                                <td>@trayTypes[0].Name</td>
+                            </tr>
     <div class="form-group row">
             <label class="control-label col-md-12">Tray Type</label>
             <div class="col-md-4">
-                <select class="form-control" @onchange="@TrayTypeClicked">
+                @*<select class="form-control" @onchange="@TrayTypeClicked">
                     <option>Select TrayType</option>
                     @for (int i = 0; i < trayTypes.Length; i++)
                     {
                         if (i == @trayTypeId)
                         {
-                            <option value="@i" selected>@trayTypes[i].Name</option>
+                    <td>"@i"</td>
+                    <td>@trayTypes[i].Name</td>
                         }
                         else
                         {
-                            <option value="@i">@trayTypes[i].Name</option>
+                            <tr>
+                                <td>Jill</td>
+                                <td>Smith</td>
+                                <td>50</td>
+                            </tr>
                         }
                     }
-                </select>
+                </select>*@
             </div>
     </div>
 
