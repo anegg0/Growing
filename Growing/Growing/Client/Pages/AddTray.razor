@@ -29,11 +29,12 @@
     {
         if (i == @trayTypeId)
         {
-            <option value="@i" selected>@trayTypes[i].Name</option>
+            <option value="@i" selected >@trayTypes[i].Name</option>
         }
         else
         {
-            <option value="@i">@trayTypes[i].Name</option>
+            <option value="@i" selected >@trayTypes[i].Name</option>
+            tray.TrayTypeId = @i;
         }
     }
     </select>
@@ -77,7 +78,8 @@
 
     protected override async Task OnInitializedAsync()
     {
-        trayTypeId = 0;
+        //trayTypeId = 0;
+        tray = new Tray();
         trayTypes = await HttpClient.GetFromJsonAsync<TrayType[]>("/api/TrayType/Index");
         var trayTypeName = trayTypes[1].Name;
          Console.WriteLine(trayTypeName);
