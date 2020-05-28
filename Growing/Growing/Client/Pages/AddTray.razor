@@ -20,12 +20,27 @@
     </div>
 
     <div class="form-group row">
-    <label class="control-label col-md-12">@trayTypeName</label>
+    <label class="control-label col-md-12">Tray Type</label>
     <div class="col-md-4">
-    <div>@trayTypeName</div>
+    @if(trayTypes != null) {
+    <select class="form-control" @onchange="@TrayTypeClicked">
+    <option>Select TrayType</option>
+    @for (int i = 0; i < trayTypes.Length; i++)
+    {
+        if (i == @trayTypeId)
+        {
+            <option value="@i" selected>@trayTypes[i].Name</option>
+        }
+        else
+        {
+            <option value="@i">@trayTypes[i].Name</option>
+        }
+    }
+    </select>
+}
     </div>
     </div>
-    <RadzenButton Text="Hi"></RadzenButton>
+
     <div class="form-group row">
         <label class="control-label col-md-12">Department</label>
         <div class="col-md-4">
@@ -72,7 +87,6 @@
     {
         trayTypeId = int.Parse(trayTypeEvent.Value.ToString());
         Console.WriteLine("trayTypeId: " + trayTypeId);
-        // var selected = trayTypes[trayTypeId];
     }
 
     protected async Task CreateTray()
