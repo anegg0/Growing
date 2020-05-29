@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
+using Blazorise;
+using Blazorise.Bootstrap;
+using Blazorise.Icons.FontAwesome;
 
 namespace Growing.Server
 {
@@ -23,6 +26,9 @@ namespace Growing.Server
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
                     new[] { "application/octet-stream" });
             });
+            services.AddBlazorise(options =>
+  {options.ChangeTextOnKeyPress = true; // optional
+  }).AddBootstrapProviders().AddFontAwesomeIcons();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +46,10 @@ namespace Growing.Server
             app.UseClientSideBlazorFiles<Client.Program>();
 
             app.UseRouting();
+
+            app.ApplicationServices
+  .UseBootstrapProviders()
+  .UseFontAwesomeIcons();
 
             app.UseEndpoints(endpoints =>
             {
