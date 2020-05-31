@@ -26,9 +26,13 @@ namespace Growing.Server
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
                     new[] { "application/octet-stream" });
             });
-            services.AddBlazorise(options =>
-  {options.ChangeTextOnKeyPress = true; // optional
-  }).AddBootstrapProviders().AddFontAwesomeIcons();
+    services
+      .AddBlazorise( options =>
+      {
+        options.ChangeTextOnKeyPress = true; // optional
+      } )
+      .AddBootstrapProviders()
+      .AddFontAwesomeIcons();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
