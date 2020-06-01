@@ -14,14 +14,14 @@ CREATE TABLE `tblTrayType` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 INSERT INTO `tblTrayType` VALUES (1,'Long Wook','LW','23.5','11.5','4.5','crapachafouech, forkenach');
 
-CREATE TABLE `tblTray` (
-  `TrayId` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tblProduction` (
+  `ProductionId` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(12) NOT NULL,
   `city` varchar(11) NOT NULL,
   `department` varchar(11) NOT NULL,
    TrayTypeId INT( 11 ) NOT NULL ,
   `SowingDate` date NOT NULL,
-  PRIMARY KEY (TrayId),
+  PRIMARY KEY (ProductionId),
   FOREIGN KEY (TrayTypeId) REFERENCES tblTrayType(TrayTypeId)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-INSERT INTO `tblTray` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
+INSERT INTO `tblProduction` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
