@@ -39,15 +39,3 @@ CREATE TABLE `tblSeeds` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 INSERT INTO `tblTray` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
 INSERT INTO `tblTray` VALUES (2,'buc','marseille','loiret',1,'2019-01-30');
-INSERT INTO `tblTray` VALUES (3,'ruc','marseille','loiret',1,'2019-01-30');
-INSERT INTO `tblTray` VALUES (4,'nuc','marseille','loiret',1,'2019-01-30');
-
-CREATE TABLE `tblSeason` (
-  `SeasonId` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(12) NOT NULL,
-  PRIMARY KEY (SeasonId),
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-INSERT INTO `tblTray` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
-INSERT INTO `tblTray` VALUES (2,'buc','marseille','loiret',1,'2019-01-30');
-INSERT INTO `tblTray` VALUES (3,'ruc','marseille','loiret',1,'2019-01-30');
-INSERT INTO `tblTray` VALUES (4,'nuc','marseille','loiret',1,'2019-01-30');

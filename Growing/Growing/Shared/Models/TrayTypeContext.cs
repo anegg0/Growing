@@ -11,7 +11,7 @@ namespace Growing.Server.DataAccess
         {
             if (!optionsBuilder.IsConfigured)
             {
-              optionsBuilder.UseMySql("server=localhost;database=growing;user=roo9t;password=;persistsecurityinfo = True");
+              optionsBuilder.UseMySql("server=localhost;database=growing;user=root;password=;persistsecurityinfo = True");
             }
         }
     }
