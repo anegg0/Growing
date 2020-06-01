@@ -13,6 +13,9 @@ CREATE TABLE `tblTrayType` (
   PRIMARY KEY (TrayTypeId)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 INSERT INTO `tblTrayType` VALUES (1,'Long Wook','LW','23.5','11.5','4.5','crapachafouech, forkenach');
+INSERT INTO `tblTrayType` VALUES (2,'Short Wook','SW','23.5','11.5','4.5','crapachafouech, forkenach');
+INSERT INTO `tblTrayType` VALUES (3,'Medium Wook','MW','23.5','11.5','4.5','crapachafouech, forkenach');
+INSERT INTO `tblTrayType` VALUES (4,'Huge Wook','HW','23.5','11.5','4.5','crapachafouech, forkenach');
 
 CREATE TABLE `tblTray` (
   `TrayId` int(11) NOT NULL AUTO_INCREMENT,
@@ -25,3 +28,26 @@ CREATE TABLE `tblTray` (
   FOREIGN KEY (TrayTypeId) REFERENCES tblTrayType(TrayTypeId)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 INSERT INTO `tblTray` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
+INSERT INTO `tblTray` VALUES (2,'buc','marseille','loiret',1,'2019-01-30');
+INSERT INTO `tblTray` VALUES (3,'ruc','marseille','loiret',1,'2019-01-30');
+INSERT INTO `tblTray` VALUES (4,'nuc','marseille','loiret',1,'2019-01-30');
+
+CREATE TABLE `tblSeeds` (
+  `SeedId` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(12) NOT NULL,
+  PRIMARY KEY (SeedId),
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `tblTray` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
+INSERT INTO `tblTray` VALUES (2,'buc','marseille','loiret',1,'2019-01-30');
+INSERT INTO `tblTray` VALUES (3,'ruc','marseille','loiret',1,'2019-01-30');
+INSERT INTO `tblTray` VALUES (4,'nuc','marseille','loiret',1,'2019-01-30');
+
+CREATE TABLE `tblSeason` (
+  `SeasonId` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(12) NOT NULL,
+  PRIMARY KEY (SeasonId),
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `tblTray` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
+INSERT INTO `tblTray` VALUES (2,'buc','marseille','loiret',1,'2019-01-30');
+INSERT INTO `tblTray` VALUES (3,'ruc','marseille','loiret',1,'2019-01-30');
+INSERT INTO `tblTray` VALUES (4,'nuc','marseille','loiret',1,'2019-01-30');
