@@ -1,16 +1,16 @@
-﻿@page "/fetchtray"
+﻿@page "/fetchproduction"
 @using Growing.Shared.Models
 @inject HttpClient HttpClient
 
-<h1>Tray Data</h1>
+<h1>Production Data</h1>
 
-<p>This component demonstrates fetching Tray data from the server.</p>
+<p>This component demonstrates fetching Production data from the server.</p>
 
 <p>
-    <a href="/addtray">Create New</a>
+    <a href="/addproduction">Create New</a>
 </p>
 
-@if (trayList == null)
+@if (productionList == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -27,18 +27,18 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var tray in trayList)
+            @foreach (var production in productionList)
             {
             <tr>
-                <td>@tray.TrayId</td>
-                <td>@tray.Name</td>
-                <td>@tray.TrayTypeId </td>
-                <td>@tray.Department</td>
-                <td>@tray.City</td> 
-                <td>@tray.SowingDate</td>
+                <td>@production.ProductionId</td>
+                <td>@production.Name</td>
+                <td>@production.TrayTypeId </td>
+                <td>@production.Department</td>
+                <td>@production.City</td> 
+                <td>@production.SowingDate</td>
                 <td>
-                    <a href='/edittray/@tray.TrayId'>Edit</a>  |
-                    <a href='/delete/@tray.TrayId'>Delete</a>
+                    <a href='/editproduction/@production.ProductionId'>Edit</a>  |
+                    <a href='/delete/@production.ProductionId'>Delete</a>
                 </td>
             </tr>
             } 
@@ -47,11 +47,11 @@ else
 }
 @code {
 
-    Tray[] trayList;
+    Production[] productionList;
     TrayType[] trayTypeList;
     protected override async Task OnInitializedAsync()
     {
-        trayList = await HttpClient.GetFromJsonAsync<Tray[]>("/api/Tray/Index");
+        productionList = await HttpClient.GetFromJsonAsync<Production[]>("/api/Production/Index");
         trayTypeList = await HttpClient.GetFromJsonAsync<TrayType[]>("/api/TrayType/Index");
     }
 }

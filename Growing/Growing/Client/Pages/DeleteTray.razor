@@ -1,33 +1,33 @@
-﻿@page "/delete/{trayID:int}"
+﻿@page "/delete/{productionID:int}"
 @using Growing.Shared.Models
 @inject HttpClient HttpClient
 @inject NavigationManager urlNavigationManager
 
-<h2>Delete Tray</h2>
-<h3>Are you sure you want to delete tray with id : @trayID</h3>
+<h2>Delete Production</h2>
+<h3>Are you sure you want to delete production with id : @productionID</h3>
 <br />
 
 <div class="col-md-4">
     <table class="table">
         <tr>
             <td>Name</td>
-            <td>@tray.Name</td>
+            <td>@production.Name</td>
         </tr>
         @*<tr>
             <td>Gender</td>
-            <td>@tray.Gender</td>
+            <td>@production.Gender</td>
         </tr>*@
         <tr>
             <td>Department</td>
-            <td>@tray.Department</td>
+            <td>@production.Department</td>
         </tr>
         <tr>
             <td>City</td>
-            <td>@tray.City</td>
+            <td>@production.City</td>
         </tr>
         <tr>
             <td>SowingDate</td>
-            <td>@tray.SowingDate</td>
+            <td>@production.SowingDate</td>
         </tr>
     </table>
     <div class="form-group">
@@ -38,24 +38,24 @@
 
 @code {
     [Parameter]
-    public int trayID { get; set; }
+    public int productionID { get; set; }
 
-    Tray tray = new Tray();
+    Production production = new Production();
 
     protected override async Task OnInitializedAsync()
     {
-        tray = await HttpClient.GetFromJsonAsync<Tray>("/api/Tray/Details/" + trayID);
+        production = await HttpClient.GetFromJsonAsync<Production>("/api/Production/Details/" + productionID);
     }
 
     protected async Task Delete()
     {
-        await HttpClient.DeleteAsync("api/Tray/Delete/" + Convert.ToInt32(trayID));
-        urlNavigationManager.NavigateTo("/fetchtray");
+        await HttpClient.DeleteAsync("api/Production/Delete/" + Convert.ToInt32(productionID));
+        urlNavigationManager.NavigateTo("/fetchproduction");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchtray");
+        urlNavigationManager.NavigateTo("/fetchproduction");
     }
 
 

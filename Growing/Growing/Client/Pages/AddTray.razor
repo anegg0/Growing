@@ -1,4 +1,4 @@
-﻿@page "/addtray"
+﻿@page "/addproduction"
 @using Growing.Shared.Models
 @using System
 @using System.Net.Http.Json
@@ -6,17 +6,17 @@
 @inject HttpClient HttpClient
 @inject NavigationManager urlNavigationManager
 
-<h1>Create Tray</h1>
+<h1>Create Production</h1>
 <hr />
 
-<EditForm Model="@tray" OnValidSubmit="CreateTray">
+<EditForm Model="@production" OnValidSubmit="CreateProduction">
     <DataAnnotationsValidator />
     <div class="form-group row">
         <label class="control-label col-md-12">Name</label>
         <div class="col-md-4">
-            <input class="form-control" @bind="tray.Name" />
+            <input class="form-control" @bind="production.Name" />
         </div>
-        <ValidationMessage For="@(() => tray.Name)" />
+        <ValidationMessage For="@(() => production.Name)" />
     </div>
 
     <div class="form-group row">
@@ -44,23 +44,23 @@
     <div class="form-group row">
         <label class="control-label col-md-12">Department</label>
         <div class="col-md-4">
-            <input class="form-control" @bind="tray.Department" />
+            <input class="form-control" @bind="production.Department" />
         </div>
-        <span><ValidationMessage For="@(() => tray.Department)" /></span>
+        <span><ValidationMessage For="@(() => production.Department)" /></span>
     </div>
     <div class="form-group row">
         <label class="control-label col-md-12">City</label>
         <div class="col-md-4">
-            <input class="form-control" @bind="tray.City" />
+            <input class="form-control" @bind="production.City" />
         </div>
-        <span><ValidationMessage For="@(() => tray.City)" /></span>
+        <span><ValidationMessage For="@(() => production.City)" /></span>
     </div>
     <div class="form-group row">
         <label class="control-label col-md-12">Sowing Date</label>
         <div class="col-md-4">
-            <input class="form-control" @bind="tray.SowingDate" />
+            <input class="form-control" @bind="production.SowingDate" />
         </div>
-        <ValidationMessage For="@(() => tray.SowingDate)" />
+        <ValidationMessage For="@(() => production.SowingDate)" />
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Save</button>
@@ -70,7 +70,7 @@
 
 @code {
     [Parameter] public string InitialText { get; set; } = "Select Type";
-    Tray tray = new Tray();
+    Production production = new Production();
     TrayType[] trayTypes;
     int trayTypeId { get; set; }
     string trayTypeName { get; set; }
@@ -89,14 +89,14 @@
         Console.WriteLine("trayTypeId: " + trayTypeId);
     }
 
-    protected async Task CreateTray()
+    protected async Task CreateProduction()
     {
-        await HttpClient.PostAsJsonAsync("/api/Tray/Create", tray);
-        urlNavigationManager.NavigateTo("/fetchtray");
+        await HttpClient.PostAsJsonAsync("/api/Production/Create", production);
+        urlNavigationManager.NavigateTo("/fetchproduction");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchtray");
+        urlNavigationManager.NavigateTo("/fetchproduction");
     }
     }

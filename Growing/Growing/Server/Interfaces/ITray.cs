@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Growing.Server.Interfaces
 {
-    public interface ITray
+    public interface IProduction
     {
-        public IEnumerable<Tray> GetAllTrays();
-        public void AddTray(Tray tray);
-        public void UpdateTray(Tray tray);
-        public Tray GetTrayData(int id);
-        public void DeleteTray(int id);
+        public IEnumerable<Production> GetAllProductions();
+        public void AddProduction(Production production);
+        public void UpdateProduction(Production production);
+        public Production GetProductionData(int id);
+        public void DeleteProduction(int id);
     }
 }

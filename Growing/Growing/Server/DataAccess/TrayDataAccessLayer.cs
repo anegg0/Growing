@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace Growing.Server.DataAccess
 {
-    public class TrayDataAccessLayer: ITray
+    public class ProductionDataAccessLayer: IProduction
     {
-        TrayContext db = new TrayContext();
+        ProductionContext db = new ProductionContext();
 
-        //To Get all trays details   
-        public IEnumerable<Tray> GetAllTrays()
+        //To Get all productions details   
+        public IEnumerable<Production> GetAllProductions()
         {
             try
             {
-                return db.tblTray.ToList();
+                return db.tblProduction.ToList();
             }
             catch
             {
@@ -25,12 +25,12 @@ namespace Growing.Server.DataAccess
             }
         }
 
-        //To Add new tray record     
-        public void AddTray(Tray tray)
+        //To Add new production record     
+        public void AddProduction(Production production)
         {
             try
             {
-                db.tblTray.Add(tray);
+                db.tblProduction.Add(production);
                 db.SaveChanges();
             }
             catch
@@ -39,12 +39,12 @@ namespace Growing.Server.DataAccess
             }
         }
 
-        //To Update the records of a particluar tray    
-        public void UpdateTray(Tray tray)
+        //To Update the records of a particluar production    
+        public void UpdateProduction(Production production)
         {
             try
             {
-                db.Entry(tray).State = EntityState.Modified;
+                db.Entry(production).State = EntityState.Modified;
                 db.SaveChanges();
             }
             catch
@@ -53,13 +53,13 @@ namespace Growing.Server.DataAccess
             }
         }
 
-        //Get the details of a particular tray    
-        public Tray GetTrayData(int id)
+        //Get the details of a particular production    
+        public Production GetProductionData(int id)
         {
             try
             {
-                Tray tray = db.tblTray.Find(id);
-                return tray;
+                Production production = db.tblProduction.Find(id);
+                return production;
             }
             catch
             {
@@ -67,13 +67,13 @@ namespace Growing.Server.DataAccess
             }
         }
 
-        //To Delete the record of a particular tray    
-        public void DeleteTray(int id)
+        //To Delete the record of a particular production    
+        public void DeleteProduction(int id)
         {
             try
             {
-                Tray tray = db.tblTray.Find(id);
-                db.tblTray.Remove(tray);
+                Production production = db.tblProduction.Find(id);
+                db.tblProduction.Remove(production);
                 db.SaveChanges();
             }
             catch
