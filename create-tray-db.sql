@@ -27,19 +27,6 @@ CREATE TABLE `tblProduction` (
   PRIMARY KEY (ProductionId),
   FOREIGN KEY (TrayTypeId) REFERENCES tblTrayType(TrayTypeId)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-<<<<<<< HEAD
 INSERT INTO `tblTray` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
 INSERT INTO `tblTray` VALUES (2,'buc','marseille','loiret',1,'2019-01-30');
-INSERT INTO `tblTray` VALUES (3,'ruc','marseille','loiret',1,'2019-01-30');
-INSERT INTO `tblTray` VALUES (4,'nuc','marseille','loiret',1,'2019-01-30');
 
-CREATE TABLE `tblSeeds` (
-  `SeedId` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(12) NOT NULL,
-  PRIMARY KEY (SeedId),
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-INSERT INTO `tblTray` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
-INSERT INTO `tblTray` VALUES (2,'buc','marseille','loiret',1,'2019-01-30');
-=======
-INSERT INTO `tblProduction` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
->>>>>>> e4849ece4d7cebfb7ee98a7df39a5f8815a6465f
