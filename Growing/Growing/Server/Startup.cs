@@ -16,7 +16,7 @@ namespace Growing.Server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddTransient<ITray, TrayDataAccessLayer>(); 
+            services.AddTransient<IProduction, ProductionDataAccessLayer>(); 
             services.AddTransient<ITrayType, TrayTypeDataAccessLayer>();
             services.AddResponseCompression(opts =>
             {
