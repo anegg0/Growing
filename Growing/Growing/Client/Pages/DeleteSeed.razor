@@ -1,0 +1,62 @@
+﻿@page "/deleteseed/{seedID:int}"
+@using Growing.Shared.Models
+@inject HttpClient HttpClient
+@inject NavigationManager urlNavigationManager
+
+<h2>Delete Tray Type</h2>
+<h3>Are you sure you want to delete tray with id : @seedID</h3>
+<br />
+
+<div class="col-md-4">
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td>@seed.Name</td>
+        </tr>
+        <tr>
+            <td>Length</td>
+            <td>@seed.Length</td>
+        </tr>
+        <tr>
+            <td>Width</td>
+            <td>@seed.Width</td>
+        </tr>
+        <tr>
+            <td>Height</td>
+            <td>@seed.Height</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>@seed.Notes</td>
+        </tr>
+    </table>
+    <div class="form-group">
+        <button class="btn btn-danger" @onclick="(async () => await Delete())">Delete</button>
+        <button class="btn btn-light" @onclick="Cancel">Cancel</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int seedID { get; set; }
+
+    Seed seed = new Seed();
+
+    protected override async Task OnInitializedAsync()
+    {
+        seed = await HttpClient.GetFromJsonAsync<Seed>("/api/Seed/Details/" + seedID);
+    }
+
+    protected async Task Delete()
+    {
+        await HttpClient.DeleteAsync("api/Seed/Delete/" + Convert.ToInt32(seedID));
+        urlNavigationManager.NavigateTo("/fetchseed");
+    }
+
+    void Cancel()
+    {
+        urlNavigationManager.NavigateTo("/fetchseed");
+    }
+
+
+}

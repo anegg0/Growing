@@ -1,0 +1,73 @@
+﻿@page "/addtraytype"
+@using Growing.Shared.Models
+@using System 
+@inject HttpClient HttpClient
+@inject NavigationManager urlNavigationManager
+
+<h1>Create Tray Type</h1>
+<hr />
+
+<EditForm Model="@seed" OnValidSubmit="CreateSeed">
+    <DataAnnotationsValidator />
+    <div class="form-group row">
+        <label class="control-label col-md-12">Name</label>
+        <div class="col-md-4">
+            <input class="form-control" @bind="seed.Name" />
+        </div>
+        <ValidationMessage For="@(() => seed.Name)" />
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12">Handle</label>
+        <div class="col-md-4">
+            <input class="form-control" @bind="seed.Handle" />
+        </div>
+        <ValidationMessage For="@(() => seed.Handle)" />
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12">Length</label>
+        <div class="col-md-4">
+            <input class="form-control" @bind="seed.Length" />
+        </div>
+        <ValidationMessage For="@(() => seed.Length)" />
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12">Width</label>
+        <div class="col-md-4">
+            <input class="form-control" @bind="seed.Width" />
+        </div>
+        <ValidationMessage For="@(() => seed.Width)" />
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12">Height</label>
+        <div class="col-md-4">
+            <input class="form-control" @bind="seed.Height" />
+        </div>
+        <ValidationMessage For="@(() => seed.Height)" />
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12">Notes</label>
+        <div class="col-md-4">
+            <input class="form-control" @bind="seed.Notes" />
+        </div>
+        <ValidationMessage For="@(() => seed.Notes)" />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button class="btn btn-light" @onclick="Cancel">Cancel</button>
+    </div>
+</EditForm>
+
+@code {
+    Seed seed = new Seed();
+
+    protected async Task CreateSeed()
+    {
+        await HttpClient.PostAsJsonAsync("/api/Seed/Create", seed);
+        urlNavigationManager.NavigateTo("/fetchtraytype");
+    }
+
+    void Cancel()
+    {
+        urlNavigationManager.NavigateTo("/fetchtraytype");
+    }
+}

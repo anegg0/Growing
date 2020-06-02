@@ -30,3 +30,46 @@ CREATE TABLE `tblProduction` (
 INSERT INTO `tblTray` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
 INSERT INTO `tblTray` VALUES (2,'buc','marseille','loiret',1,'2019-01-30');
 
+
+CREATE TABLE `tblSeeds` (
+  `SeedId` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(12) NOT NULL,
+  `handle` varchar(11) NOT NULL,
+  `SeedLifetime` varchar(11) NOT NULL,
+  `SeedingRate` varchar(11) NOT NULL,
+  `CurrentDTM` varchar(11) NOT NULL,
+  `DTM1` varchar(11) NOT NULL,
+  `DTM2` varchar(11) NOT NULL,
+  `DTM3` varchar(11) NOT NULL,
+  PRIMARY KEY (SeedId),
+  FOREIGN KEY (SeasonId) REFERENCES tblSeason(SeasonId)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `tblSeeds` VALUES (1,'amaranth','AH','30','1','28','29','19','49','29');
+
+CREATE TABLE `tblSeason` (
+  `SeasonId` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(12) NOT NULL,
+  PRIMARY KEY (SeasonId)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `tblSeason` VALUES (1,'nigo');
+
+CREATE TABLE `tblProduction` (
+  `ProductionId` int(11) NOT NULL AUTO_INCREMENT,
+   `name` varchar(12) NOT NULL,
+   PRIMARY KEY (ProductionId)
+   ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `tblSeason` VALUES (1,'nigo');
+
+CREATE TABLE `tblOrder` (
+   `OrderId` int(11) NOT NULL AUTO_INCREMENT,
+   `name` varchar(12) NOT NULL,
+   PRIMARY KEY (OrderId)
+   ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `tblSeason` VALUES (1,'nigo');
+
+CREATE TABLE `tblSupplier` (
+   `SupplierId` int(11) NOT NULL AUTO_INCREMENT,
+   `name` varchar(12) NOT NULL,
+   PRIMARY KEY (SupplierId)
+   ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `tblSeason` VALUES (1,'nigo');
