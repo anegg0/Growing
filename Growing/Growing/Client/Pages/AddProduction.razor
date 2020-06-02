@@ -1,4 +1,4 @@
-﻿﻿@page "/addproduction"
+﻿@page "/addproduction"
 @using Growing.Shared.Models
 @using System
 @using System.Net.Http.Json
@@ -34,7 +34,7 @@
         else
         {
             <option value="@i" selected >@trayTypes[i].Name</option>
-            tray.TrayTypeId = @i;
+            production.TrayTypeId = @i;
         }
     }
     </select>
@@ -71,7 +71,7 @@
 
 @code {
     [Parameter] public string InitialText { get; set; } = "Select Type";
-    production production = new production();
+    Production production = new Production();
     TrayType[] trayTypes;
     int trayTypeId { get; set; }
     string trayTypeName { get; set; }

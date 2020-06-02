@@ -11,7 +11,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="3.2.0-preview1.20073.1" PrivateAssets="all" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor.DevServer" Version="3.2.0-preview1.20073.1" PrivateAssets="all" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
-    <PackageReference Include="Radzen.Blazor" Version="2.9.4" />
     <PackageReference Include="System.Net.Http.Json" Version="3.2.0-preview3.20175.8" />
   </ItemGroup>
 
