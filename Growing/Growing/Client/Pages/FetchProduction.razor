@@ -1,0 +1,57 @@
+﻿@page "/fetchproduction"
+@using Growing.Shared.Models
+@inject HttpClient HttpClient
+
+<h1>Production Data</h1>
+
+<p>This component demonstrates fetching Production data from the server.</p>
+
+<p>
+    <a href="/addproduction">Create New</a>
+</p>
+
+@if (productionList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Tray Type</th>
+                <th>Department</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var production in productionList)
+            {
+            <tr>
+                <td>@production.ProductionId</td>
+                <td>@production.Name</td>
+                <td>@production.TrayTypeId </td>
+                <td>@production.Department</td>
+                <td>@production.City</td> 
+                <td>@production.SowingDate</td>
+                <td>
+                    <a href='/editproduction/@production.ProductionId'>Edit</a>  |
+                    <a href='/delete/@production.ProductionId'>Delete</a>
+                </td>
+            </tr>
+            } 
+        </tbody>
+    </table>
+}
+@code {
+
+    Production[] productionList;
+    TrayType[] trayTypeList;
+    protected override async Task OnInitializedAsync()
+    {
+        productionList = await HttpClient.GetFromJsonAsync<Production[]>("/api/Production/Index");
+        trayTypeList = await HttpClient.GetFromJsonAsync<TrayType[]>("/api/TrayType/Index");
+    }
+}
