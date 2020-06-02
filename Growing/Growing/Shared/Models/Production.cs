@@ -3,13 +3,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Growing.Shared.Models
 {
-    public class Tray
+    public class Production
     {
-        public Tray()
+        public Production()
         {
             SowingDate = DateTime.Now;
         }
-        public int TrayId { get; set; }
+        public int ProductionId { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
