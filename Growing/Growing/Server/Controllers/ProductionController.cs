@@ -11,51 +11,51 @@ using Microsoft.AspNetCore.Mvc;
 namespace Growing.Server.Controllers
 {
     [Route("api/[controller]")]
-    public class TrayController : Controller
+    public class ProductionController : Controller
     {
-        private readonly ITray objtray;
+        private readonly IProduction objproduction;
 
-        public TrayController(ITray _objtray)
+        public ProductionController(IProduction _objproduction)
         {
-            objtray = _objtray;
+            objproduction = _objproduction;
         }
 
         [HttpGet]
         [Route("Index")]
-        public IEnumerable<Tray> Index()
+        public IEnumerable<Production> Index()
         {
-            return objtray.GetAllTrays();
+            return objproduction.GetAllProductions();
         }
 
         [HttpPost]
         [Route("Create")]
-        public void Create([FromBody] Tray tray)
+        public void Create([FromBody] Production production)
         {
             if (ModelState.IsValid)
-                objtray.AddTray(tray);
+                objproduction.AddProduction(production);
         }
 
         [HttpGet]
         [Route("Details/{id}")]
-        public Tray Details(int id)
+        public Production Details(int id)
         {
 
-            return objtray.GetTrayData(id);
+            return objproduction.GetProductionData(id);
         }
 
         [HttpPut]
         [Route("Edit")]
-        public void Edit([FromBody]Tray tray)
+        public void Edit([FromBody]Production production)
         {
             if (ModelState.IsValid)
-                objtray.UpdateTray(tray);
+                objproduction.UpdateProduction(production);
         }
 
         [HttpDelete]
         [Route("Delete/{id}")]
         public void Delete(int id)
         {
-            objtray.DeleteTray(id);
+            objproduction.DeleteProduction(id);
         }
     }
 }

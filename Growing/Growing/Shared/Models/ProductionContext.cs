@@ -3,15 +3,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Growing.Server.DataAccess
 {
-    public class TrayContext : DbContext
+    public class ProductionContext : DbContext
     {
-        public virtual DbSet<Tray> tblTray { get; set; }
+        public virtual DbSet<Production> tblProduction { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-              optionsBuilder.UseMySql("server=localhost;database=growing;user=root;password=;persistsecurityinfo = True");
+              optionsBuilder.UseMySql("server=localhost;database=growing;user=admin;password=;persistsecurityinfo = True");
             }
         }
     }

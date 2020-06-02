@@ -17,16 +17,17 @@ INSERT INTO `tblTrayType` VALUES (2,'Short Wook','SW','23.5','11.5','4.5','crapa
 INSERT INTO `tblTrayType` VALUES (3,'Medium Wook','MW','23.5','11.5','4.5','crapachafouech, forkenach');
 INSERT INTO `tblTrayType` VALUES (4,'Huge Wook','HW','23.5','11.5','4.5','crapachafouech, forkenach');
 
-CREATE TABLE `tblTray` (
-  `TrayId` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tblProduction` (
+  `ProductionId` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(12) NOT NULL,
   `city` varchar(11) NOT NULL,
   `department` varchar(11) NOT NULL,
    TrayTypeId INT( 11 ) NOT NULL ,
   `SowingDate` date NOT NULL,
-  PRIMARY KEY (TrayId),
+  PRIMARY KEY (ProductionId),
   FOREIGN KEY (TrayTypeId) REFERENCES tblTrayType(TrayTypeId)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+<<<<<<< HEAD
 INSERT INTO `tblTray` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
 INSERT INTO `tblTray` VALUES (2,'buc','marseille','loiret',1,'2019-01-30');
 INSERT INTO `tblTray` VALUES (3,'ruc','marseille','loiret',1,'2019-01-30');
@@ -39,3 +40,6 @@ CREATE TABLE `tblSeeds` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 INSERT INTO `tblTray` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
 INSERT INTO `tblTray` VALUES (2,'buc','marseille','loiret',1,'2019-01-30');
+=======
+INSERT INTO `tblProduction` VALUES (1,'nigo','marseille','loiret',1,'2019-01-30');
+>>>>>>> e4849ece4d7cebfb7ee98a7df39a5f8815a6465f
