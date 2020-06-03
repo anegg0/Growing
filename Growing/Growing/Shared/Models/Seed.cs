@@ -9,11 +9,11 @@ namespace Growing.Shared.Models
         [Required]
         public string Name { get; set; }
         [Required]
-        public string Handle { get; set; }
+        public int Handle { get; set; }
         [Required]
-        public string SeedLifetime { get; set; }
+        public int SeedLifetime { get; set; }
         [Required]
-        public string SeedingRate { get; set; }
+        public int SeedingRate { get; set; }
         [Required]
         public string CurrentDTM { get; set; } 
         public string DTM1 { get; set; }
