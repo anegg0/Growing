@@ -1,4 +1,4 @@
-﻿@page "/addtraytype"
+@page "/addseed"
 @using Growing.Shared.Models
 @using System 
 @inject HttpClient HttpClient
@@ -24,33 +24,59 @@
         <ValidationMessage For="@(() => seed.Handle)" />
     </div>
     <div class="form-group row">
-        <label class="control-label col-md-12">Length</label>
+    <label class="control-label col-md-12">Seed Lifetime</label>
         <div class="col-md-4">
-            <input class="form-control" @bind="seed.Length" />
+    <input class="form-control" @bind="seed.SeedLifetime" />
         </div>
-        <ValidationMessage For="@(() => seed.Length)" />
+    <ValidationMessage For="@(() => seed.SeedLifetime)" />
     </div>
     <div class="form-group row">
-        <label class="control-label col-md-12">Width</label>
+    <label class="control-label col-md-12">Seeding Rate</label>
         <div class="col-md-4">
-            <input class="form-control" @bind="seed.Width" />
+    <input class="form-control" @bind="seed.SeedingRate" />
         </div>
-        <ValidationMessage For="@(() => seed.Width)" />
+    <ValidationMessage For="@(() => seed.SeedingRate)" />
     </div>
     <div class="form-group row">
-        <label class="control-label col-md-12">Height</label>
+    <label class="control-label col-md-12">CurrentDTM</label>
         <div class="col-md-4">
-            <input class="form-control" @bind="seed.Height" />
+    <input class="form-control" @bind="seed.CurrentDTM" />
         </div>
-        <ValidationMessage For="@(() => seed.Height)" />
+    <ValidationMessage For="@(() => seed.CurrentDTM)" />
     </div>
+
     <div class="form-group row">
-        <label class="control-label col-md-12">Notes</label>
+        <label class="control-label col-md-12">DTM1</label>
         <div class="col-md-4">
-            <input class="form-control" @bind="seed.Notes" />
+    <input class="form-control" @bind="seed.DTM1" />
         </div>
-        <ValidationMessage For="@(() => seed.Notes)" />
+    <ValidationMessage For="@(() => seed.DTM1)" />
     </div>
+
+    <div class="form-group row">
+    <label class="control-label col-md-12">DTM2</label>
+    <div class="col-md-4">
+    <input class="form-control" @bind="seed.DTM2" />
+    </div>
+    <ValidationMessage For="@(() => seed.DTM2)" />
+    </div>
+
+    <div class="form-group row">
+    <label class="control-label col-md-12">DTM3</label>
+    <div class="col-md-4">
+    <input class="form-control" @bind="seed.DTM3" />
+    </div>
+    <ValidationMessage For="@(() => seed.DTM3)" />
+    </div>
+
+    <div class="form-group row">
+    <label class="control-label col-md-12">DTM4</label>
+    <div class="col-md-4">
+    <input class="form-control" @bind="seed.DTM4" />
+    </div>
+    <ValidationMessage For="@(() => seed.DTM4)" />
+    </div>
+
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Save</button>
         <button class="btn btn-light" @onclick="Cancel">Cancel</button>
@@ -63,11 +89,11 @@
     protected async Task CreateSeed()
     {
         await HttpClient.PostAsJsonAsync("/api/Seed/Create", seed);
-        urlNavigationManager.NavigateTo("/fetchtraytype");
+        urlNavigationManager.NavigateTo("/traytype");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchtraytype");
+        urlNavigationManager.NavigateTo("/traytype");
     }
 }

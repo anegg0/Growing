@@ -72,11 +72,11 @@
     protected async Task UpdateTrayType()
     {
         await HttpClient.PutAsJsonAsync("api/TrayType/Edit", trayType);
-        urlNavigationManager.NavigateTo("/fetchtraytype");
+        urlNavigationManager.NavigateTo("/traytype");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchtraytype");
+        urlNavigationManager.NavigateTo("/traytype");
     }
 }

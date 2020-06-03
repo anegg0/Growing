@@ -50,12 +50,12 @@
     protected async Task Delete()
     {
         await HttpClient.DeleteAsync("api/TrayType/Delete/" + Convert.ToInt32(trayTypeID));
-        urlNavigationManager.NavigateTo("/fetchtraytype");
+        urlNavigationManager.NavigateTo("/traytype");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchtraytype");
+        urlNavigationManager.NavigateTo("/traytype");
     }
 
 

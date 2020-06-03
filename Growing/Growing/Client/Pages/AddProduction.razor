@@ -94,11 +94,11 @@
     protected async Task CreateProduction()
     {
         await HttpClient.PostAsJsonAsync("/api/Production/Create", production);
-        urlNavigationManager.NavigateTo("/fetchproduction");
+        urlNavigationManager.NavigateTo("/production");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchproduction");
+        urlNavigationManager.NavigateTo("/production");
     }
     }

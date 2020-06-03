@@ -63,11 +63,11 @@
     protected async Task CreateTrayType()
     {
         await HttpClient.PostAsJsonAsync("/api/TrayType/Create", trayType);
-        urlNavigationManager.NavigateTo("/fetchtraytype");
+        urlNavigationManager.NavigateTo("/traytype");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchtraytype");
+        urlNavigationManager.NavigateTo("/traytype");
     }
 }

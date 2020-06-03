@@ -70,12 +70,12 @@
     protected async Task Delete()
     {
         await HttpClient.DeleteAsync("api/Seed/Delete/" + Convert.ToInt32(seedID));
-        urlNavigationManager.NavigateTo("/fetchseed");
+        urlNavigationManager.NavigateTo("/seed");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchseed");
+        urlNavigationManager.NavigateTo("/seed");
     }
 
 
