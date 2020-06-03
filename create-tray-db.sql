@@ -41,10 +41,11 @@ CREATE TABLE `tblSeeds` (
   `DTM1` varchar(11) NOT NULL,
   `DTM2` varchar(11) NOT NULL,
   `DTM3` varchar(11) NOT NULL,
+  `DTM4` varchar(11) NOT NULL,
   PRIMARY KEY (SeedId),
   FOREIGN KEY (SeasonId) REFERENCES tblSeason(SeasonId)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-INSERT INTO `tblSeeds` VALUES (1,'amaranth','AH','30','1','28','29','19','49','29');
+INSERT INTO `tblSeeds` VALUES (1,'amaranth','AH','30','1','28','29','19','49','29','3');
 
 CREATE TABLE `tblSeason` (
   `SeasonId` int(11) NOT NULL AUTO_INCREMENT,
