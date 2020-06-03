@@ -46,12 +46,12 @@
     protected async Task Delete()
     {
         await HttpClient.DeleteAsync("api/Production/Delete/" + Convert.ToInt32(productionID));
-        urlNavigationManager.NavigateTo("/fetchproduction");
+        urlNavigationManager.NavigateTo("/production");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchproduction");
+        urlNavigationManager.NavigateTo("/production");
     }
 
 

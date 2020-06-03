@@ -69,11 +69,11 @@
     protected async Task UpdateProduction()
     {
         await HttpClient.PutAsJsonAsync("api/Production/Edit", production);
-        urlNavigationManager.NavigateTo("/fetchproduction");
+        urlNavigationManager.NavigateTo("/production");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchproduction");
+        urlNavigationManager.NavigateTo("/production");
     }
 }

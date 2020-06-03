@@ -1,12 +1,12 @@
-﻿@page "/fetchseed"
+﻿@page "/seed"
 @using Growing.Shared.Models
 @inject HttpClient HttpClient
 
 <h1>Seeds</h1>
 
-<p>
+    <p>
     <a href="/addseed">Create New</a>
-</p>
+    </p>
 
 @if (seedList == null)
 {
@@ -24,6 +24,7 @@ else
                 <th>SeedingRate</th>
                 <th>CurrentDTM</th>
                 <th>DTM1</th>
+                <th>DTM2</th>
                 <th>DTM3</th>
                 <th>DTM4</th>
             </tr>
@@ -41,6 +42,7 @@ else
             <td>@seed.DTM1</td>
             <td>@seed.DTM2</td>
             <td>@seed.DTM3</td>
+            <td>@seed.DTM4</td>
                 <td>
                     <a href='/editseed/@seed.SeedId'>Edit</a>  |
                     <a href='/delete/@seed.SeedId'>Delete</a>

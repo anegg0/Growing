@@ -95,11 +95,11 @@
     protected async Task UpdateSeed()
     {
         await HttpClient.PutAsJsonAsync("api/Seed/Edit", seed);
-        urlNavigationManager.NavigateTo("/fetchseed");
+        urlNavigationManager.NavigateTo("/seed");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/fetchseed");
+        urlNavigationManager.NavigateTo("/seed");
     }
 }

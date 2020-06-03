@@ -18,6 +18,7 @@ namespace Growing.Server
             services.AddMvc();
             services.AddTransient<IProduction, ProductionDataAccessLayer>(); 
             services.AddTransient<ITrayType, TrayTypeDataAccessLayer>();
+            services.AddTransient<ISeed, SeedDataAccessLayer>();
             services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
