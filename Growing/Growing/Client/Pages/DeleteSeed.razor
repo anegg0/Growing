@@ -1,0 +1,82 @@
+﻿@page "/deleteseed/{seedID:int}"
+@using Growing.Shared.Models
+@inject HttpClient HttpClient
+@inject NavigationManager urlNavigationManager
+
+<h2>Delete Seed</h2>
+<h3>Are you sure you want to delete tray with id : @seedID</h3>
+<br />
+
+<div class="col-md-4">
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td>@seed.Name</td>
+        </tr>
+        <tr>
+            <td>Handle</td>
+    <td>@seed.Handle</td>
+        </tr>
+        <tr>
+            <td>Seed Lifetime</td>
+    <td>@seed.SeedLifetime</td>
+        </tr>
+        <tr>
+            <td>Seeding Rate</td>
+    <td>@seed.SeedingRate</td>
+        </tr>
+        <tr>
+    <td>Current Days To Maturity (DTM)</td>
+    <td>@seed.CurrentDTM</td>
+        </tr>
+    <tr>
+    <td>DTM1</td>
+    <td>@seed.DTM1</td>
+    </tr>
+    <tr>
+    <td>DTM2</td>
+    <td>@seed.DTM2</td>
+    </tr>
+    <tr>
+    <td>DTM2</td>
+    <td>@seed.DTM2</td>
+    </tr>
+    <tr>
+    <td>DTM3</td>
+    <td>@seed.DTM3</td>
+    </tr>
+    <tr>
+    <td>DTM4</td>
+    <td>@seed.DTM4</td>
+    </tr>
+    </table>
+    <div class="form-group">
+        <button class="btn btn-danger" @onclick="(async () => await Delete())">Delete</button>
+        <button class="btn btn-light" @onclick="Cancel">Cancel</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int seedID { get; set; }
+
+    Seed seed = new Seed();
+
+    protected override async Task OnInitializedAsync()
+    {
+        seed = await HttpClient.GetFromJsonAsync<Seed>("/api/Seed/Details/" + seedID);
+    }
+
+    protected async Task Delete()
+    {
+        await HttpClient.DeleteAsync("api/Seed/Delete/" + Convert.ToInt32(seedID));
+        urlNavigationManager.NavigateTo("/fetchseed");
+    }
+
+    void Cancel()
+    {
+        urlNavigationManager.NavigateTo("/fetchseed");
+    }
+
+
+}
