@@ -1,0 +1,99 @@
+﻿@page "/addseed"
+@using Growing.Shared.Models
+@using System 
+@inject HttpClient HttpClient
+@inject NavigationManager urlNavigationManager
+
+<h1>Create Tray Type</h1>
+<hr />
+
+<EditForm Model="@seed" OnValidSubmit="CreateSeed">
+    <DataAnnotationsValidator />
+    <div class="form-group row">
+        <label class="control-label col-md-12">Name</label>
+        <div class="col-md-4">
+            <input class="form-control" @bind="seed.Name" />
+        </div>
+        <ValidationMessage For="@(() => seed.Name)" />
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12">Handle</label>
+        <div class="col-md-4">
+            <input class="form-control" @bind="seed.Handle" />
+        </div>
+        <ValidationMessage For="@(() => seed.Handle)" />
+    </div>
+    <div class="form-group row">
+    <label class="control-label col-md-12">Seed Lifetime</label>
+        <div class="col-md-4">
+    <input class="form-control" @bind="seed.SeedLifetime" />
+        </div>
+    <ValidationMessage For="@(() => seed.SeedLifetime)" />
+    </div>
+    <div class="form-group row">
+    <label class="control-label col-md-12">Seeding Rate</label>
+        <div class="col-md-4">
+    <input class="form-control" @bind="seed.SeedingRate" />
+        </div>
+    <ValidationMessage For="@(() => seed.SeedingRate)" />
+    </div>
+    <div class="form-group row">
+    <label class="control-label col-md-12">CurrentDTM</label>
+        <div class="col-md-4">
+    <input class="form-control" @bind="seed.CurrentDTM" />
+        </div>
+    <ValidationMessage For="@(() => seed.CurrentDTM)" />
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-12">DTM1</label>
+        <div class="col-md-4">
+    <input class="form-control" @bind="seed.DTM1" />
+        </div>
+    <ValidationMessage For="@(() => seed.DTM1)" />
+    </div>
+
+    <div class="form-group row">
+    <label class="control-label col-md-12">DTM2</label>
+    <div class="col-md-4">
+    <input class="form-control" @bind="seed.DTM2" />
+    </div>
+    <ValidationMessage For="@(() => seed.DTM2)" />
+    </div>
+
+    <div class="form-group row">
+    <label class="control-label col-md-12">DTM3</label>
+    <div class="col-md-4">
+    <input class="form-control" @bind="seed.DTM3" />
+    </div>
+    <ValidationMessage For="@(() => seed.DTM3)" />
+    </div>
+
+    <div class="form-group row">
+    <label class="control-label col-md-12">DTM4</label>
+    <div class="col-md-4">
+    <input class="form-control" @bind="seed.DTM4" />
+    </div>
+    <ValidationMessage For="@(() => seed.DTM4)" />
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button class="btn btn-light" @onclick="Cancel">Cancel</button>
+    </div>
+</EditForm>
+
+@code {
+    Seed seed = new Seed();
+
+    protected async Task CreateSeed()
+    {
+        await HttpClient.PostAsJsonAsync("/api/Seed/Create", seed);
+        urlNavigationManager.NavigateTo("/fetchtraytype");
+    }
+
+    void Cancel()
+    {
+        urlNavigationManager.NavigateTo("/fetchtraytype");
+    }
+}
