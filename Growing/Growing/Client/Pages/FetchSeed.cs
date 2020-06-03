@@ -1,0 +1,61 @@
+﻿
+@page "/fetchseed"
+@using Growing.Shared.Models
+@inject HttpClient HttpClient
+
+<h1>Seeds</h1>
+
+<p>
+    <a href="/addseed">Create New</a>
+</p>
+
+@if (seedList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class='table'>
+        <thead>
+            <tr>
+        <th>SeedId</th>
+                <th>Name</th>
+                <th>Handle</th>
+        <th>SeedLifetime</th>
+        <th>SeedingRate</th>
+        <th>CurrentDTM</th>
+        <th>DTM1</th>
+        <th>DTM3</th>
+        <th>DTM4</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var seed in seedList)
+            {
+            <tr>
+            <td>@seed.SeedId</td>
+                <td>@seed.Name</td>
+            <td>@seed.Handle </td>
+            <td>@seed.SeedLifetime</td>
+            <td>@seed.SeedingRate</td> 
+            <td>@seed.CurrentDTM</td>
+            <td>@seed.DTM1</td>
+            <td>@seed.DTM2</td>
+            <td>@seed.DTM3</td>
+                <td>
+                    <a href='/editseed/@seed.SeedId'>Edit</a>  |
+                    <a href='/delete/@seed.SeedId'>Delete</a>
+                </td>
+            </tr>
+            } 
+        </tbody>
+    </table>
+}
+@code {
+
+    Seed[] seedList;
+    protected override async Task OnInitializedAsync()
+    {
+        seedList = await HttpClient.GetFromJsonAsync<Seed[]>("/api/Seed/Index");
+    }
+}
