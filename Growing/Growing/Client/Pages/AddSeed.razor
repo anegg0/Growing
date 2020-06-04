@@ -89,11 +89,11 @@
     protected async Task CreateSeed()
     {
         await HttpClient.PostAsJsonAsync("/api/Seed/Create", seed);
-        urlNavigationManager.NavigateTo("/traytype");
+        urlNavigationManager.NavigateTo("/seed");
     }
 
     void Cancel()
     {
-        urlNavigationManager.NavigateTo("/traytype");
+        urlNavigationManager.NavigateTo("/seed");
     }
 }

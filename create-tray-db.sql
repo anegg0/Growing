@@ -55,4 +55,4 @@ CREATE TABLE `tblSeed` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 INSERT INTO `tblSeed` VALUES (1,'amaranth','AH','30','1',1,'29','19','49','29','3');
 INSERT INTO `tblSeed` VALUES (2,'radish','RH','30','1',1,'29','19','49','29','3');
-
+INSERT INTO `tblSeed` VALUES (3,'spinach','RH','30','1',1,'29','19','49','29','3');
